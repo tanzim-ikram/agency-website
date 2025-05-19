@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.font-sen {
+  font-family: var(--font-sen), sans-serif;
+}
+
+.font-figtree {
+  font-family: var(--font-figtree), sans-serif;
+}
