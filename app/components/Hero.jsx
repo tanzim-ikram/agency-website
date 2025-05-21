@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Icon } from "@iconify/react";
 
 const Hero = () => {
   return (
@@ -32,10 +33,12 @@ const Hero = () => {
             <h1 className="text-[56px] md:text-[64px] font-normal leading-tight text-zinc-900 text-center">
               We Fuel Brands
             </h1>
-            
+
             {/* "with Creativity &" - Second line left-aligned */}
             <div className="flex items-center gap-3 mt-4 justify-start ml-55">
-              <span className="text-neutral-400 text-[56px] md:text-[64px]">with</span>
+              <span className="text-neutral-400 text-[56px] md:text-[64px]">
+                with
+              </span>
               <div className="flex items-center gap-3">
                 <Image
                   src="/home/text-img1.png"
@@ -47,10 +50,12 @@ const Hero = () => {
                 <span className="text-zinc-900 font-normal font-sen text-[56px] md:text-[64px]">
                   Creativity
                 </span>
-                <span className="text-neutral-400 text-[56px] md:text-[64px]">&</span>
+                <span className="text-neutral-400 text-[56px] md:text-[64px]">
+                  &
+                </span>
               </div>
             </div>
-            
+
             {/* "Intelligence" - Third line right-aligned */}
             <div className="flex items-center gap-3 mt-7 justify-end mr-55">
               <Image
@@ -68,35 +73,20 @@ const Hero = () => {
 
           {/* Buttons - Centered below the text */}
           <div className="mt-10 flex justify-center gap-6">
-            <button className="bg-zinc-900 text-white rounded-full px-6 py-2 text-sm flex items-center gap-2 hover:bg-gray-800 transition">
+            <button className="bg-zinc-900 text-white rounded-full px-12 py-4 text-base font-bold flex items-center gap-2 hover:bg-blue-600 transition">
               Get In Touch
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <path d="M17 8l4 4-4 4M21 12H3" />
-              </svg>
+              <Icon icon="iconoir:mail" width="22" height="22" />
             </button>
 
-            <button className="bg-white border border-gray-300 text-gray-700 rounded-full px-6 py-2 text-sm flex items-center gap-2 hover:bg-gray-100 transition">
+            <button className="bg-white border border-neutral-200 text-zinc-900 rounded-full px-12 py-4 text-base font-bold flex items-center gap-2 hover:bg-zinc-900 hover:text-white shadow-sm transition">
               Explore Our Services
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8v4l3 3" />
-              </svg>
+              <Image
+                src="/icons/3d-box.svg"
+                alt="Intelligence"
+                width={24}
+                height={24}
+                className="rounded-full"
+              />
             </button>
           </div>
 

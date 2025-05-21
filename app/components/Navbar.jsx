@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -83,15 +84,9 @@ const Navbar = () => {
         {/* Get in Touch Button */}
         <a
           href="/contact"
-          className="flex items-center gap-2 bg-zinc-900 text-white px-6 py-3 rounded-full text-base"
+          className="flex items-center gap-2 bg-zinc-900 hover:bg-blue-600 transition text-white px-6 py-3 rounded-full text-base"
         >
-          <Image
-            src="/navbar/envelop.svg"
-            alt="Envelope"
-            width={18}
-            height={18}
-            priority
-          />
+          <Icon icon="iconoir:mail" width="22" height="22" />
           <span>Get In Touch</span>
         </a>
       </nav>
