@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${sen.variable} ${figtree.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className="scroll-smooth">
+      <body className={`${sen.variable} ${figtree.variable} antialiased leading-8 overflow-x-hidden`}>
         {children}
       </body>
     </html>
