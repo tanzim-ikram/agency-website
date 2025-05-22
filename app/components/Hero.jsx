@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Backgrounds */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-270 z-0">
         <Image
           src="/home/BG lines.png"
           alt="Background Lines"
@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       <main className="font-sen relative min-h-screen text-zinc-900 pt-32 z-10">
-        <div className="max-w-7xl mx-auto px-6 pb-40">
+        <div className="max-w-7xl mx-auto px-0 py-6">
           {/* Heading */}
           <div className="flex flex-col">
             {/* "We Fuel Brands" - Centered at top */}
@@ -72,7 +72,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons - Centered below the text */}
-          <div className="mt-10 flex justify-center gap-6">
+          <div className="mt-20 flex justify-center gap-6">
             <button className="bg-zinc-900 text-white rounded-full px-12 py-4 text-base font-bold flex items-center gap-2 hover:bg-blue-600 transition">
               Get In Touch
               <Icon icon="iconoir:mail" width="22" height="22" />
@@ -90,43 +90,111 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Rating */}
-          <div className="mt-6 text-sm text-gray-600 flex justify-center items-center gap-2">
-            <div className="flex items-center gap-1 text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <svg
-                  key={i}
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.974a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.39 2.464a1 1 0 00-.364 1.118l1.286 3.974c.3.922-.755 1.688-1.54 1.118L10 13.347l-3.39 2.464c-.784.57-1.838-.196-1.539-1.118l1.286-3.974a1 1 0 00-.364-1.118L3.603 9.4c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.974z" />
-                </svg>
-              ))}
-            </div>
-            <span className="font-semibold">5.0</span>
-            <span className="text-gray-500">From 80+ review from </span>
-            <Image src="/home/clutch.png" alt="Clutch" width={18} height={18} />
-          </div>
+          <section className="relative py-16 overflow-hidden w-full mb-0">
+            {/* Overlay Top */}
+            <Image
+              src="/home/overlay1.png"
+              alt="overlay top"
+              width={1200}
+              height={100}
+              className="absolute top-40 left-0 w-full h-24 z-40 pointer-events-none"
+            />
 
-          {/* Bottom Images */}
-          <div className="mt-20 flex justify-center flex-wrap gap-6">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div
-                key={num}
-                className="bg-white rounded-lg shadow-lg overflow-hidden max-w-[150px] flex-shrink-0"
-              >
-                <Image
-                  src={`/home/image${num}.png`}
-                  alt={`Image ${num}`}
-                  width={150}
-                  height={150}
-                  className="object-cover"
-                />
+            {/* Rating */}
+            <div className="relative z-50 top-30 text-center mb-12">
+              <div className="text-yellow-400 text-xl flex justify-center gap-1 items-center">
+                {Array(5)
+                  .fill(0)
+                  .map((_, i) => (
+                    <Icon
+                      icon="tabler:star-filled"
+                      width="20"
+                      height="20"
+                      key={i}
+                    />
+                  ))}
+                <p className="text-gray-900 font-semibold text-lg ml-2">5.0</p>
               </div>
-            ))}
-          </div>
+              <p className="mt-1 text-sm text-zinc-500 flex justify-center items-center">
+                From 80+ review from
+                <Image
+                  src="/home/clutch.png"
+                  alt="Clutch"
+                  width={18}
+                  height={18}
+                  className="mx-1 inline-block"
+                />
+                <span className="font-semibold text-zinc-500">Clutch</span>
+              </p>
+            </div>
+
+            {/* Image Grid in V shape */}
+            <div className="relative z-20 w-full flex justify-items-stretch items-center">
+              <div className="grid grid-cols-5 gap-4 items-end">
+                {/* Leftmost Large */}
+                <Image
+                  src="/home/image1.png"
+                  alt="image1"
+                  width={300}
+                  height={350}
+                  className="w-full h-[400px] object-cover rounded-xl shadow-md"
+                />
+
+                {/* Medium Left */}
+                <Image
+                  src="/home/image2.svg"
+                  alt="image2"
+                  width={250}
+                  height={300}
+                  className="w-full h-[300px] object-cover rounded-xl shadow-md"
+                />
+
+                {/* Smallest Middle */}
+                <Image
+                  src="/home/image3.png"
+                  alt="image3"
+                  width={220}
+                  height={250}
+                  className="w-full h-[250px] object-cover rounded-xl shadow-md"
+                />
+
+                {/* Medium Right */}
+                <Image
+                  src="/home/image4.svg"
+                  alt="image4"
+                  width={250}
+                  height={300}
+                  className="w-full h-[300px] object-cover rounded-xl shadow-md"
+                />
+
+                {/* Collaged Image 5 & 6 */}
+                <div className="flex flex-col gap-4 w-full">
+                  <Image
+                    src="/home/image5.png"
+                    alt="image5"
+                    width={300}
+                    height={200}
+                    className="w-full h-[195px] object-cover rounded-xl shadow-md"
+                  />
+                  <Image
+                    src="/home/image6.png"
+                    alt="image6"
+                    width={300}
+                    height={150}
+                    className="w-full h-[195px] object-cover rounded-xl shadow-md"
+                  />
+                  {/* Overlay Bottom */}
+                  <Image
+                    src="/home/overlay2.png"
+                    alt="overlay bottom"
+                    width={1200}
+                    height={100}
+                    className="absolute bottom-[-10] left-0 w-full h-24 z-10 pointer-events-none"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
