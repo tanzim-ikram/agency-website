@@ -72,7 +72,6 @@ const Industries = () => {
             />
           </div>
 
-          {/* Icon bubbles */}
           {/* Text bubbles */}
           {/* Creativity */}
           <div
