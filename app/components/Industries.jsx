@@ -97,38 +97,6 @@ const Industries = () => {
           >
             Code
           </div>
-          {/* Creativity */}
-          {/* <div className="absolute top-32 -left-30 w-72 h-24 z-30 backdrop-blur-xs">
-            <Image
-              src="/home/creativity.svg"
-              alt="Creativity"
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
-          </div> */}
-
-          {/* Curiosity */}
-          {/* <div className="absolute bottom-30 -left-15 w-72 h-24 z-30 backdrop-blur-xs">
-            <Image
-              src="/home/curiosity.svg"
-              alt="Curiosity"
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
-          </div> */}
-
-          {/* Code */}
-          {/* <div className="absolute top-48 left-85 w-54 h-24 z-30 backdrop-blur-xs">
-            <Image
-              src="/home/code.svg"
-              alt="Code"
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
-          </div> */}
         </div>
       </section>
     </div>
