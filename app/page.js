@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Industries from "./components/Industries";
 import Navbar from "./components/Navbar";
 import Partners from "./components/Partners";
+import Solutions from "./components/Solutions";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Partners />
       <Industries />
       <Expertise />
+      <Solutions />
     </>
   );
 }

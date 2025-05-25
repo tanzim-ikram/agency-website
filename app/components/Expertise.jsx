@@ -46,7 +46,7 @@ const Expertise = () => {
     <div>
       <section className="relative py-20 bg-white overflow-hidden">
         {/* Background image with opacity 10% and rotated 75deg */}
-        <div className="absolute top-0 right-0 -z-0">
+        <div className="absolute top-0 right-0 z-0">
         <Image
           src="/home/BG.png"
           alt="Background"
@@ -58,35 +58,35 @@ const Expertise = () => {
       </div>
 
         {/* Title */}
-        <h2 className="text-center font-sen text-zinc-900 text-5xl mb-4 flex justify-center items-center gap-2">
+        <h2 className="text-center font-sen text-zinc-900 text-5xl mb-4 flex justify-center items-center gap-2 relative z-10">
           Our{" "}
           <Image
             src="/home/text-img5.png"
             alt="Lightbulb"
             width={80}
             height={40}
-            className="inline rounded-full"
+            className="inline rounded-full z-10"
             priority
           />{" "}
           Expertise
         </h2>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-center font-figtree font-normal text-zinc-500 mb-14">
+        <p className="max-w-3xl mx-auto text-center font-figtree text-lg font-normal text-zinc-500 mb-14 relative z-10">
           At Farasha Digital, we use a modern technology stack to build
           scalable, high-performance solutions, ensuring our products meet the
           highest industry standards.
         </p>
 
         {/* Cards grid */}
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-4 z-10">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-4 relative z-10">
           {expertiseCards.map(({ id, title, desc, img }) => (
             <div
               key={id}
               className="relative cursor-pointer rounded-lg p-6 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
               style={{
                 width: "300px",
-                height: "400px",
+                height: "380px",
               }}
             >
               <div className="relative w-40 h-40 mb-6 pointer-events-none">
