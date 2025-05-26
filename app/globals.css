@@ -7,3 +7,11 @@
 .font-figtree {
   font-family: var(--font-figtree), sans-serif;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

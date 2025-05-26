@@ -77,7 +77,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <a href="/about">About Us</a>
+          <a href="./services">About Us</a>
           <a href="/career">Career</a>
         </div>
 

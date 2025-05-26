@@ -48,22 +48,43 @@ const industries = [
 
 const Solutions = () => {
   return (
-    <div>
+    <div className="relative w-full min-h-screen overflow-hidden">
+      {/* Background images confined to the Solutions section */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/home/BG shapes.svg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          priority
+          quality={100}
+        />
+      </div>
+
+      {/* Other background images (optional, if you want them visible on top of shapes) */}
+      <div className="absolute top-0 right-0 -z-10">
+        <Image
+          src="/home/BG_Ellipse1.svg"
+          alt="Background Ellipse 1"
+          height={1210}
+          width={2878}
+          priority
+        />
+      </div>
+      <div className="absolute bottom-0 right-0 -z-10">
+        <Image
+          src="/home/BG_Ellipse2.svg"
+          alt="Background Ellipse 2"
+          height={482}
+          width={1572}
+          priority
+        />
+      </div>
+
       {/* Main content */}
-      <section className="relative max-w-7xl mx-auto px-6 py-16 bg-white overflow-hidden">
-        {/* Background images */}
-        <div className="absolute top-0 right-0 z-0">
-          <Image
-            src="/home/BG_Ellipse1.svg"
-            alt="Background"
-            height={1210}
-            width={2878}
-            className=""
-            priority
-          />
-        </div>
+      <section className="relative max-w-7xl mx-auto px-6 py-16 bg-transparent mb-10 mt-10">
         {/* Heading */}
-        <h2 className="flex justify-center items-center gap-2 font-sen text-5xl text-zinc-900 mb-4 z-10 relative">
+        <h2 className="flex justify-center items-center gap-2 font-sen text-5xl text-zinc-900 mb-4 relative z-10">
           Industries We{" "}
           <Image
             src="/home/text-img4.png"
@@ -77,13 +98,13 @@ const Solutions = () => {
         </h2>
 
         {/* Subtitle */}
-        <p className="max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-14 font-normal z-10 relative">
+        <p className="max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-14 font-normal relative z-10">
           We provide tailored solutions across industries, using innovative
           technology to drive growth and efficiency.
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-10 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
@@ -97,9 +118,7 @@ const Solutions = () => {
                 className="mb-4"
                 priority
               />
-              <h3 className="font-medium text-zinc-900 text-lg mb-2">
-                {title}
-              </h3>
+              <h3 className="font-medium text-zinc-900 text-lg mb-2">{title}</h3>
               <p className="text-sm text-zinc-500 font-normal leading-relaxed">
                 {description}
               </p>

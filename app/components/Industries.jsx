@@ -37,7 +37,7 @@ const Industries = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-xl text-center font-normal font-figtree text-zinc-500 text-lg mb-10">
+        <p className="max-w-2xl text-center font-normal font-figtree text-zinc-500 text-lg mb-10">
           We provide tailored solutions across industries, using innovative
           technology to drive growth and efficiency
         </p>
