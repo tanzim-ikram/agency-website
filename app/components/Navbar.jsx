@@ -18,12 +18,12 @@ const Navbar = () => {
             priority
           />
         </div>
-        <div className="fixed top-0 z-10">
+        <div className="fixed -top-20 left-0 z-10">
           <Image
             src="/navbar/nav-bottom.png"
             alt="Decorative bottom navigation background"
             height={186}
-            width={1440}
+            width={1600}
             priority
           />
         </div>

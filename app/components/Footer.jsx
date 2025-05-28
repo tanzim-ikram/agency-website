@@ -152,7 +152,7 @@ const Footer = () => {
           <div className="flex justify-center w-full">
             <div className="mt-8 pt-4 flex flex-col items-center text-zinc-500 text-sm font-figtree gap-2 lg:gap-6 md:flex-row md:justify-center md:gap-6">
               <p>© 2024 Farasha.Digital</p>
-              <a href="#" className="hover:underline">
+              <a href="./policy" className="hover:underline">
                 Privacy Policy
               </a>
               <a href="#" className="hover:underline">
