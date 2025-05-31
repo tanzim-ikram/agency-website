@@ -51,33 +51,51 @@ const Navbar = () => {
             onMouseLeave={() => setIsServicesOpen(false)}
           >
             <button className="flex items-center gap-1">
-              <span>Services</span>
+              <a href="/services">Services</a>
               <ChevronDown className="w-4 h-4" />
             </button>
             {isServicesOpen && (
-              <div className="absolute mt-2 w-40 bg-white shadow-md rounded-md p-2 z-30">
+              <div className="absolute w-60 bg-white shadow-md rounded-md p-2 z-30">
                 <a
-                  href="/services/design"
+                  href="/services/frontend"
                   className="block px-3 py-2 hover:bg-gray-100 rounded"
                 >
-                  Design
+                  Frontend Development
                 </a>
                 <a
-                  href="/services/development"
+                  href="/services/bsckend"
                   className="block px-3 py-2 hover:bg-gray-100 rounded"
                 >
-                  Development
+                  Backend Development
                 </a>
                 <a
-                  href="/services/marketing"
+                  href="/services/mobiledev"
                   className="block px-3 py-2 hover:bg-gray-100 rounded"
                 >
-                  Marketing
+                  Mobile Development
+                </a>
+                <a
+                  href="/services/ai-ml"
+                  className="block px-3 py-2 hover:bg-gray-100 rounded"
+                >
+                  AI & Machine Learning
+                </a>
+                <a
+                  href="/services/devops"
+                  className="block px-3 py-2 hover:bg-gray-100 rounded"
+                >
+                  DevOps & Infrastructure
+                </a>
+                <a
+                  href="/services/databases"
+                  className="block px-3 py-2 hover:bg-gray-100 rounded"
+                >
+                  Databases
                 </a>
               </div>
             )}
           </div>
-          <a href="./services">About Us</a>
+          <a href="/about">About Us</a>
           <a href="/career">Career</a>
         </div>
 

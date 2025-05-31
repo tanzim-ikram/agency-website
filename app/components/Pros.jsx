@@ -59,7 +59,7 @@ const Pros = () => {
             className="inline rounded-full"
             priority
           />{" "}
-          Empower
+          No cons
         </h2>
 
         {/* Cards Grid */}
@@ -77,10 +77,14 @@ const Pros = () => {
                 className="mb-4"
                 priority
               />
-              <h3 className="font-medium text-zinc-900 text-lg mb-2">
+              <h3 className="font-medium text-zinc-900 text-2xl mb-2"
+                style={{ lineHeight: "135%" }}
+              >
                 {title}
               </h3>
-              <p className="text-sm text-zinc-500 font-normal leading-relaxed">
+              <p className="text-lg text-zinc-500 font-normal leading-relaxed"
+                style={{ lineHeight: "160%" }}
+              >
                 {description}
               </p>
             </div>
