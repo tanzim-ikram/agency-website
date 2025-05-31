@@ -66,12 +66,16 @@ const FrontendHero = () => {
             <span className="text-zinc-700 font-medium text-lg">Services</span>
           </div>
 
-          <h2 className="font-sen max-w-4xl text-zinc-900 font-normal text-5xl leading-tight mb-8 mt-8">
-            Frontend That Speaks to Your <br /> Users - Fast, Fluid, and
+          <h2 className="font-sen max-w-4xl text-zinc-900 font-normal text-5xl leading-tight mb-8 mt-8 tracking-[-3]"
+          style={{ lineHeight: "160%"}}
+          >
+            Frontend That Speaks to Your <br /> Users – Fast, Fluid, and
             Functional
           </h2>
 
-          <p className="font-figtree text-zinc-500 text-lg max-w-2xl mx-auto mb-16">
+          <p className="font-figtree text-zinc-500 text-lg max-w-2xl mx-auto mb-16"
+          style={{ lineHeight: "160%"}}
+          >
             We craft responsive, high-performance frontends using modern
             frameworks like React.js, Next.js, and Vue.js. Our solutions are
             optimized for speed, scalability, and user engagement, ensuring a
