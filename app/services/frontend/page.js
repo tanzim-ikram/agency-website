@@ -4,16 +4,20 @@ import Navbar from '../../components/Navbar'
 import FrontendHero from '../../components/FrontendHero'
 import Footer from '../../components/Footer'
 import Overview from '@/app/components/Overview'
+import Process from '@/app/components/Process'
+import FAQ from '@/app/components/FAQ'
 
-const page = () => {
+const Frontend = () => {
   return (
     <div>
       <Navbar />
       <FrontendHero />
       <Overview />
+      <Process />
+      <FAQ />
       <Footer />
     </div>
   )
 }
 
-export default page
+export default Frontend
