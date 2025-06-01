@@ -53,7 +53,7 @@ const Pros = () => {
           All pros{" "}
           <Image
             src="/services/text-img2.png"
-            alt="Impact icon 3"
+            alt="Impact icon"
             width={160}
             height={80}
             className="inline rounded-full"
