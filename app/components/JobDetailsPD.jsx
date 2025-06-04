@@ -16,6 +16,7 @@ const JobDetailsPD = () => {
               height={50}
               width={400}
               priority
+              className="pointer-events-none"
             />
           </div>
           <div className="fixed -top-20 left-0 z-10">
@@ -25,6 +26,7 @@ const JobDetailsPD = () => {
               height={186}
               width={1600}
               priority
+              className="pointer-events-none"
             />
           </div>
         </div>
@@ -54,13 +56,13 @@ const JobDetailsPD = () => {
       </div>
       {/* Header Section */}
       <section
-        className="text-center py-20 px-6 mt-12 flex flex-col items-center"
+        className="text-center py-20 px-6 flex flex-col items-center"
         style={{
           background:
             "linear-gradient(151deg, rgba(254, 248, 255, 0.50) 8.45%, rgba(227, 236, 255, 0.50) 45.2%, rgba(205, 202, 255, 0.50) 101.49%)",
         }}
       >
-        <h1 className="text-zinc-900 font-sen text-5xl font-normal leading-[140%] tracking-[-1.44px]">
+        <h1 className="text-zinc-900 font-sen text-5xl mt-12 font-normal leading-[140%] tracking-[-1.44px]">
           Product Designer
         </h1>
         <p className="text-zinc-500 font-figtree text-lg font-normal leading-[160%] mt-2">
