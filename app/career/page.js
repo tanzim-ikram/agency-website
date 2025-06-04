@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import CareerHero from '../components/CareerHero'
 import Footer from '../components/Footer'
 import Openings from '../components/Openings'
+import Benefits from '../components/Benefits'
 
 const Career = () => {
   return (
@@ -11,6 +12,7 @@ const Career = () => {
       <Navbar />
       <CareerHero />
       <Openings />
+      <Benefits />
       <Footer />
     </div>
   )

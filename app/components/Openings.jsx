@@ -31,7 +31,7 @@ const jobs = [
 
 const Openings = () => {
   return (
-    <section className="bg-white py-20 px-4 z-0 relative">
+    <section className="bg-white py-10 px-4 z-0 relative">
       <div className="max-w-5xl mx-auto">
         <div className="absolute top-0 right-0 -z-10">
           <Image
@@ -43,7 +43,7 @@ const Openings = () => {
             className="pointer-events-none"
           />
         </div>
-        <h2 className="text-6xl font-sen font-normal text-zinc-900 text-center mb-18.5 mt-10">
+        <h2 className="text-6xl font-sen font-normal text-zinc-900 text-center mb-18.5 mt-24">
           All Openings
         </h2>
 

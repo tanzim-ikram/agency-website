@@ -59,7 +59,7 @@ const WhatWeDo = () => {
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-xl"
+              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-xl hover:bg-violet-50"
             >
               <Image
                 src={`/about/${icon}`}

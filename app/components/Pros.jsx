@@ -67,7 +67,7 @@ const Pros = () => {
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-md"
+              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-md hover:bg-violet-50"
             >
               <Image
                 src={`/services/${icon}`}
