@@ -84,10 +84,15 @@ const Openings = () => {
               </div>
 
               <div className="mt-4 md:mt-0 flex items-start md:items-center">
-                <button className="text-zinc-900 text-[28px] font-sen font-normal leading-[110%] tracking-[-0.84px] flex items-center gap-2 hover:underline">
-                  Apply
-                  <Icon icon="mage:arrow-up-right" width="32" height="40" />
-                </button>
+                <a
+                  href={`/career/${job.title.toLowerCase().replace(/ /g, "-")}`}
+                  className="mt-4 md:mt-0 flex items-start md:items-center"
+                >
+                  <span className="text-zinc-900 text-[28px] font-sen font-normal leading-[110%] tracking-[-0.84px] flex items-center gap-2 hover:underline">
+                    Apply
+                    <Icon icon="mage:arrow-up-right" width="32" height="32" />
+                  </span>
+                </a>
               </div>
             </div>
           ))}
