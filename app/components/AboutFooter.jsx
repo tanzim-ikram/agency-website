@@ -95,7 +95,13 @@ const AboutFooter = () => {
               className="bg-zinc-900 text-white text-lg font-figtree font-normal leading-[175%] px-7.5 py-3.5 rounded-full flex items-center justify-center gap-2 hover:bg-blue-600 transition mt-12"
             >
               Leave us a Message
-              <Icon icon="mdi:message-text-outline" width={20} height={20} />
+              <Image
+                src="/icons/message.svg"
+                alt="Handshake"
+                width={24}
+                height={24}
+              />
+              {/* <Icon icon="mdi:message-text-outline" width={20} height={20} /> */}
             </button>
           </form>
         </div>
@@ -124,23 +130,47 @@ const AboutFooter = () => {
             <Image src="/logo.svg" alt="Logo" width={80} height={40} />
 
             <nav className="flex gap-6 mt-6 md:mt-0 font-figtree font-normal text-lg text-zinc-900">
-              <a href="#" className="hover:underline">Home</a>
-              <a href="#" className="hover:underline">Services</a>
-              <a href="#" className="hover:underline">About Us</a>
-              <a href="#" className="hover:underline">Career</a>
+              <a href="#" className="hover:underline">
+                Home
+              </a>
+              <a href="#" className="hover:underline">
+                Services
+              </a>
+              <a href="#" className="hover:underline">
+                About Us
+              </a>
+              <a href="#" className="hover:underline">
+                Career
+              </a>
             </nav>
 
             <div className="inline-flex items-center gap-2 mt-6 md:mt-0 text-zinc-500">
-              <a href="#" aria-label="Twitter" className="hover:text-zinc-900 transition">
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="hover:text-zinc-900 transition"
+              >
                 <Icon icon="pajamas:twitter" width="20" height="20" />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:text-zinc-900 transition">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="hover:text-zinc-900 transition"
+              >
                 <Icon icon="ic:outline-facebook" width="26" height="26" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-zinc-900 transition">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="hover:text-zinc-900 transition"
+              >
                 <Icon icon="mdi:linkedin" width="26" height="26" />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-zinc-900 transition">
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="hover:text-zinc-900 transition"
+              >
                 <Icon icon="mdi:youtube" width="28" height="28" />
               </a>
             </div>
@@ -149,8 +179,12 @@ const AboutFooter = () => {
           {/* Copyright Section */}
           <div className="mt-8 pt-4 flex flex-col items-center text-zinc-500 text-sm font-figtree gap-2 md:flex-row md:justify-center md:gap-6">
             <p>© 2024 Farasha.Digital</p>
-            <a href="./policy" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms of Service</a>
+            <a href="./policy" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:underline">
+              Terms of Service
+            </a>
           </div>
         </footer>
       </section>

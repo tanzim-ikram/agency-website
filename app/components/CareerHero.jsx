@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-const ServiceHero = () => {
+const CareerHero = () => {
   return (
     <div>
       <section className="relative bg-white min-h-[420px] top-10 flex items-center font-sen mb-50">
@@ -10,7 +10,7 @@ const ServiceHero = () => {
           <Image
             src="/home/BG lines.png"
             alt="Background Line"
-            height={2880}
+            height={1000}
             width={2400}
             priority
             className="pointer-events-none"
@@ -92,4 +92,4 @@ const ServiceHero = () => {
   );
 };
 
-export default ServiceHero;
+export default CareerHero;

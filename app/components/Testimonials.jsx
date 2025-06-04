@@ -73,7 +73,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[380px] md:min-w-[450px] max-w-[450px] bg-white border border-neutral-200 rounded-xl shadow-sm p-6 shrink-0 flex flex-col"
+              className="min-w-[380px] md:min-w-[450px] max-w-[450px] bg-white border border-neutral-200 rounded-xl shadow-sm p-6 shrink-0 flex flex-col hover:bg-violet-50"
             >
               {/* Avatar & Quote */}
               <div className="flex items-center gap-4 mb-4">

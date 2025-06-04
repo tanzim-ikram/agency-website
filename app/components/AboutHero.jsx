@@ -112,28 +112,6 @@ const AboutHero = () => {
             className="w-full h-auto object-cover"
           />
         </div>
-
-        {/* Bottom Images */}
-        {/* <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6  z-20">
-          <div className="rounded-r-4xl overflow-hidden  mt-20">
-            <Image
-              src="/about/Image1.png"
-              alt="Office 1"
-              width={600}
-              height={520}
-              className="w-full"
-            />
-          </div>
-          <div className="rounded-2xl overflow-hidden">
-            <Image
-              src="/about/Image2.png"
-              alt="Office 2"
-              width={810}
-              height={520}
-              className="w-full"
-            />
-          </div>
-        </div> */}
       </section>
     </div>
   );

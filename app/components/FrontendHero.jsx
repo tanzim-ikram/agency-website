@@ -87,11 +87,7 @@ const FrontendHero = () => {
             className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-white text-lg font-semibold font-figtree gap-2 hover:bg-blue-600 transition"
           >
             Talk to an expert
-            <Icon
-              icon="eva:diagonal-arrow-right-up-fill"
-              width="24"
-              height="24"
-            />
+            <Icon icon="mage:arrow-up-right" width="24" height="24" />
           </button>
         </div>
       </section>

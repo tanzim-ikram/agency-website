@@ -25,24 +25,24 @@ const Footer = () => {
         />
 
         {/* Main Content */}
-        <div className="max-w-4xl mx-auto px-6 py-20 text-center relative z-10 mt-10">
-          <h1 className="font-sen text-3xl md:text-5xl text-zinc-900 font-normal mb-4 gap-2">
+        <div className="max-w-5xl mx-auto px-6 py-20 text-center relative z-40 mt-10">
+          <h1 className="font-sen text-6xl text-zinc-900 font-normal mb-4 gap-2">
             Let's Shape{" "}
             <Image
               src="/home/text-img6.png"
               alt="Handshake"
-              width={80}
-              height={40}
-              className="inline rounded-full"
+              width={120}
+              height={80}
+              className="inline  rounded-full"
             />{" "}
             Digital Future
           </h1>
 
-          <h1 className="font-sen text-3xl md:text-5xl text-zinc-900 font-normal mb-4">
+          <h1 className="font-sen text-6xl text-zinc-900 font-normal mb-4">
             Today With Us.
           </h1>
 
-          <p className="mt-10 max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-8 font-normal relative z-10">
+          <p className="mt-8 max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-8 font-normal relative z-10">
             The purpose of a FAQ is generally to provide information on frequent
             questions or concerns.
           </p>
@@ -58,21 +58,31 @@ const Footer = () => {
           <Image
             src="/home/Footer_img.svg"
             alt="Footer Bottom Right"
-            width={350}
-            height={100}
+            width={580}
+            height={690}
             className="absolute bottom-35 right-0 z-10"
             priority
           />
         </div>
 
         {/* Overlay Image before Footer */}
-        <div className="absolute bottom-42 left-0 w-full z-20">
+        <div className="absolute -bottom-50 left-0 w-full z-20">
+          <Image
+            src="/home/FooterBottomOverlay.png"
+            alt="Overlay"
+            layout="responsive"
+            width={524}
+            height={260}
+            priority
+          />
+        </div>
+        <div className="absolute bottom-45 left-0 w-full z-30">
           <Image
             src="/home/overlay2.png"
             alt="Overlay"
             layout="responsive"
             width={1440}
-            height={150}
+            height={220}
             priority
           />
         </div>

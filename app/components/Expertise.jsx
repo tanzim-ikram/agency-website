@@ -107,11 +107,7 @@ const Expertise = () => {
                 </div>
 
                 <div className="absolute top-4 right-4 text-zinc-900 transition pointer-events-none">
-                  <Icon
-                    icon="eva:diagonal-arrow-right-up-fill"
-                    width="24"
-                    height="24"
-                  />
+                  <Icon icon="mage:arrow-up-right" width="24" height="24" />
                 </div>
 
                 <h3 className="text-zinc-900 font-medium font-sen text-lg mb-2">
