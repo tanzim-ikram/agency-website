@@ -1,15 +1,19 @@
 'use client'
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import ContactHero from '../components/ContactHero'
+import ContactForm from '../components/ContactForm'
+import ContactFAQ from '../components/ContactFAQ'
+import ShortFooter from '../components/ShortFooter'
 
 const Contact = () => {
   return (
     <div>
       <Navbar />
       <ContactHero />
-      <Footer />
+      <ContactForm />
+      <ContactFAQ />
+      <ShortFooter />
     </div>
   )
 }

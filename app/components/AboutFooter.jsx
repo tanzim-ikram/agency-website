@@ -97,7 +97,7 @@ const AboutFooter = () => {
               Leave us a Message
               <Image
                 src="/icons/message.svg"
-                alt="Handshake"
+                alt="Message"
                 width={24}
                 height={24}
               />

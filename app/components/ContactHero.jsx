@@ -59,13 +59,13 @@ const ContactHero = () => {
             <span className="text-zinc-500">Friendly team</span>
           </h1>
 
-          <p className="text-black/60 font-figtree font-normal max-w-xl mx-auto text-center text-lg mb-14">
+          <p className="text-black/60 font-figtree font-normal max-w-xl mx-auto text-center text-lg mb-20">
             Let us know how can we help you
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-24 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-10 z-10">
           {/* Card 1 */}
           <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
             <Image
