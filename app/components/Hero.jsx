@@ -30,42 +30,42 @@ const Hero = () => {
           {/* Heading */}
           <div className="flex flex-col">
             {/* "We Fuel Brands" - Centered at top */}
-            <h1 className="text-[56px] md:text-[64px] font-normal leading-tight text-zinc-900 text-center">
+            <h1 className="text-[80px] font-normal leading-[120%] text-zinc-900 text-center">
               We Fuel Brands
             </h1>
 
             {/* "with Creativity &" - Second line left-aligned */}
-            <div className="flex items-center gap-3 mt-4 justify-start ml-55">
-              <span className="text-neutral-400 text-[56px] md:text-[64px]">
+            <div className="flex items-center gap-3 mt-4 justify-start ml-30">
+              <span className="text-neutral-400 text-[80px] font-normal leading-[120%]">
                 with
               </span>
               <div className="flex items-center gap-3">
                 <Image
                   src="/home/text-img1.png"
                   alt="Creativity"
-                  width={130}
-                  height={40}
+                  width={200}
+                  height={80}
                   className="rounded-full"
                 />
-                <span className="text-zinc-900 font-normal font-sen text-[56px] md:text-[64px]">
+                <span className="text-zinc-900 font-normal font-sen text-[80px] leading-[120%]">
                   Creativity
                 </span>
-                <span className="text-neutral-400 text-[56px] md:text-[64px]">
+                <span className="text-neutral-400 font-normal font-sen text-[80px] leading-[120%]">
                   &
                 </span>
               </div>
             </div>
 
             {/* "Intelligence" - Third line right-aligned */}
-            <div className="flex items-center gap-3 mt-7 justify-end mr-55">
+            <div className="flex items-center gap-3 mt-7 justify-end mr-25">
               <Image
                 src="/home/text-img2.png"
                 alt="Intelligence"
-                width={130}
-                height={40}
+                width={200}
+                height={80}
                 className="rounded-full"
               />
-              <span className="text-zinc-900 font-normal font-sen text-[56px] md:text-[64px]">
+              <span className="text-zinc-900 font-normal font-sen text-[80px] leading-[120%]">
                 Intelligence
               </span>
             </div>
