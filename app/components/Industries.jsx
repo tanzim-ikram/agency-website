@@ -12,15 +12,15 @@ const gradientTextStyle = {
 const Industries = () => {
   return (
     <div>
-      <section className="relative flex flex-col items-center py-10 mt-20 bg-white">
+      <section className="relative flex flex-col items-center py-12 bg-white">
         {/* Heading */}
-        <h1 className="flex items-center gap-2 font-sen text-5xl text-zinc-900 mb-8">
+        <h1 className="flex flex-row items-center gap-4 font-sen text-[28px] sm:text-[60px] text-zinc-900 mb-8">
           Turn Ideas{" "}
           <Image
             src="/home/text-img3.png"
             alt="Text Img 3"
-            width={80}
-            height={40}
+            width={120}
+            height={70}
             className="inline rounded-full"
             priority
           />{" "}
@@ -28,8 +28,8 @@ const Industries = () => {
           <Image
             src="/home/text-img4.png"
             alt="Text Img 4"
-            width={80}
-            height={40}
+            width={120}
+            height={70}
             className="inline rounded-full"
             priority
           />{" "}
@@ -43,7 +43,7 @@ const Industries = () => {
         </p>
 
         {/* Button */}
-        <button className="mb-4 px-6 py-2 flex items-center gap-2 rounded-full bg-zinc-900 font-semibold text-white font-figtree hover:bg-blue-600 transition z-30">
+        <button className="mb-4 px-7.5 py-3.5 flex items-center gap-2.5 rounded-full bg-zinc-900 font-semibold text-white font-figtree hover:bg-blue-600 transition z-30 leading-[175%]">
           About Farasha Digital
           <Icon icon="lineicons:arrow-right" width="25" height="25" />
         </button>
