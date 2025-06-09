@@ -52,7 +52,7 @@ const Expertise = () => {
     <div>
       <section className="relative py-20 bg-white overflow-hidden">
         {/* Background image */}
-        <div className="absolute top-0 right-0 z-0">
+        <div className="absolute top-0 right-0 z-0 h-full w-[300px] sm:w-[674px]">
           <Image
             src="/home/BG.png"
             alt="Background"
@@ -63,21 +63,21 @@ const Expertise = () => {
         </div>
 
         {/* Title */}
-        <h2 className="text-center font-sen text-zinc-900 text-5xl mb-4 flex justify-center items-center gap-2 relative z-10">
+        <h2 className="text-center font-sen text-zinc-900 text-[28px] sm:text-6xl mb-0 sm:mb-8 flex justify-center items-center gap-4 relative z-10">
           Our{" "}
           <Image
             src="/home/text-img5.png"
             alt="Lightbulb"
-            width={80}
-            height={40}
-            className="inline rounded-full z-10"
+            width={120}
+            height={70}
+            className="inline object-cover rounded-full z-10 w-[90] h-[40] sm:w-[120] sm:h-[70]"
             priority
           />{" "}
           Expertise
         </h2>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-center font-figtree text-lg font-normal text-zinc-500 mb-14 relative z-10">
+        <p className="max-w-sm sm:max-w-3xl mx-auto text-center font-figtree text-lg font-normal text-zinc-500 sm:mb-16 mb-0 relative z-10 py-10 sm:py-0">
           At Farasha Digital, we use a modern technology stack to build
           scalable, high-performance solutions, ensuring our products meet the
           highest industry standards.
@@ -134,7 +134,7 @@ const Expertise = () => {
 
         {/* Button */}
         <div className="flex justify-center mt-16">
-          <button className="rounded-full bg-zinc-900 text-white font-figtree font-semibold px-10 py-2.5 flex items-center gap-2 hover:bg-blue-600 transition leading-[175%]">
+          <button className="rounded-full bg-zinc-900 text-white font-figtree font-semibold px-10 py-2.5 flex items-center gap-2 hover:bg-blue-600 transition leading-[175%] z-10">
             See All Services
             <Icon icon="lineicons:arrow-right" width="25" height="25" />
           </button>
