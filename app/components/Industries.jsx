@@ -59,14 +59,14 @@ const Industries = () => {
         </button>
 
         {/* Globe Container */}
-        <div className="relative w-full max-w-xs xs:max-w-sm sm:max-w-lg md:max-w-2xl h-[180px] xs:h-[220px] sm:h-[320px] md:h-[400px] mx-auto mt-6 sm:mt-10">
+        <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-2xl h-[180px] xs:h-[220px] sm:h-[320px] md:h-[400px] mx-auto mt-6 sm:mt-10">
           {/* Ellipse background behind the globe */}
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-[180px] xs:w-[220px] sm:w-[320px] md:w-[400px] h-[120px] sm:h-[180px] z-10">
-            <Image
+          <div className="absolute sm:-top-10 sm:-left-5 -top-22 -left-14 sm:w-180 sm:h-120 w-120 h-80 z-10">
+            <Image  
               src="/home/ellipse3.png"
               alt="Ellipse Background"
-              fill
-              className="object-contain"
+              layout="fill"
+              objectFit="contain"
               priority
             />
           </div>
@@ -76,8 +76,8 @@ const Industries = () => {
             <Image
               src="/home/globe.png"
               alt="Globe"
-              fill
-              className="object-contain"
+              layout="fill"
+              objectFit="contain"
               priority
             />
           </div>
@@ -85,7 +85,7 @@ const Industries = () => {
           {/* Text bubbles */}
           {/* Creativity */}
           <div
-            className="absolute z-30 top-4 left-0 xs:left-2 sm:left-6 bg-white/40 backdrop-blur-xs rounded-full px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-4 font-sen text-[16px] xs:text-xl sm:text-3xl md:text-5xl"
+            className="absolute z-30 top-8 left-0 sm:top-16 sm:-left-28 bg-white/40 backdrop-blur-xs rounded-full sm:px-11 sm:py-5 px-4 py-2 font-sen text-[28px] sm:text-[60px] leading-[120%]"
             style={gradientTextStyle}
           >
             Creativity
@@ -93,7 +93,7 @@ const Industries = () => {
 
           {/* Curiosity */}
           <div
-            className="absolute z-30 bottom-4 left-2 xs:left-6 sm:left-16 bg-white/40 backdrop-blur-xs rounded-full px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-4 font-sen text-[16px] xs:text-xl sm:text-3xl md:text-5xl"
+            className="absolute z-30 bottom-6 left-8 sm:bottom-15 sm:-left-4 bg-white/40 backdrop-blur-xs rounded-full sm:px-11 sm:py-5 px-4 py-2 font-sen text-[28px] sm:text-[60px] leading-[120%]"
             style={gradientTextStyle}
           >
             Curiosity
@@ -101,7 +101,7 @@ const Industries = () => {
 
           {/* Code */}
           <div
-            className="absolute z-30 top-20 right-0 xs:right-2 sm:right-6 bg-white/40 backdrop-blur-xs rounded-full px-3 py-1 xs:px-4 xs:py-2 sm:px-6 sm:py-4 font-sen text-[16px] xs:text-xl sm:text-3xl md:text-5xl"
+            className="absolute z-30 top-18 right-10 sm:top-40 sm:right-0 bg-white/40 backdrop-blur-xs rounded-full sm:px-11 sm:py-5 px-4 py-2 font-sen text-[28px] sm:text-[60px] leading-[120%]"
             style={gradientTextStyle}
           >
             Code
