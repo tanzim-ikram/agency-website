@@ -34,11 +34,11 @@ const Hero = () => {
               We Fuel Brands
             </h1>
 
-            <div className="flex flex-row items-center gap-3 mt-6 justify-center sm:justify-start md:ml-26">
+            <div className="flex flex-row items-center gap-3 sm:gap-7.5 mt-3 sm:mt-7 justify-center sm:justify-start md:ml-26">
               <span className="text-neutral-400 text-[36px] sm:text-[60px] md:text-[80px] font-normal leading-[120%]">
                 with
               </span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 sm:gap-7.5">
                 <Image
                   src="/home/text-img1.png"
                   alt="Creativity"
@@ -55,7 +55,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-row items-center gap-3 mt-7 justify-center sm:justify-end mr-30 w-full">
+            <div className="flex flex-row items-center gap-3 sm:gap-7.5 mt-3 sm:mt-7 justify-center sm:justify-end mr-30 w-full">
               <span className="text-neutral-400 font-normal text-[36px] sm:text-[60px] md:text-[80px] leading-[120%] inline sm:hidden">
                 &
               </span>
@@ -91,16 +91,17 @@ const Hero = () => {
             </button>
           </div>
 
-          <section className="relative py-16 mt-4 overflow-hidden w-full">
-            <div className="absolute flex flex-col items-center justify-center w-full text-center z-40 sm:mt-5">
+          <section className="relative mt-16 overflow-hidden w-full">
+            {/* Clutch Rating */}
+            <div className="relative sm:absolute flex flex-col items-center justify-center w-full text-center z-30 mb-5 sm:mb-0 sm:mt-5">
               <div className="text-yellow-400 text-xl flex justify-center gap-1 items-center">
                 {Array(5)
                   .fill(0)
                   .map((_, i) => (
                     <Icon
                       icon="tabler:star-filled"
-                      width="20"
-                      height="20"
+                      width={20}
+                      height={20}
                       key={i}
                     />
                   ))}
@@ -119,37 +120,40 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="relative flex items-center justify-center">
-              <Image
-                src="/home/overlay1.png"
-                alt="overlay top"
-                width={1200}
-                height={100}
-                className="absolute top-0 left-0 w-full h-24 z-10 pointer-events-none"
-              />
+            {/* Hero Image and Overlay */}
+            <div className="relative z-10 flex items-center justify-center">
               <Image
                 src="/home/heroImg.png"
                 alt="Hero Collage"
                 width={1440}
                 height={510}
-                className="w-full h-auto object-cover z-0"
+                className="w-full h-auto object-cover z-10"
                 priority
               />
+              {/* Overlay Top */}
+              <Image
+                src="/home/overlay1.png"
+                alt="overlay top"
+                width={1200}
+                height={100}
+                className="absolute top-0 left-0 w-full z-20 pointer-events-none h-[50] sm:h-[150]"
+              />
+              {/* Overlay Bottom */}
               <Image
                 src="/home/overlay2.png"
                 alt="overlay bottom"
                 width={1200}
                 height={100}
-                className="absolute bottom-[-10] left-0 w-full h-24 z-10 pointer-events-none"
+                className="absolute bottom-0 left-0 w-full z-20 pointer-events-none h-[50] sm:h-[150]"
               />
             </div>
 
             {/* Trusted Brands Logos */}
-            <div className="mt-10 px-4 pt-12.5">
+            <div className="mt-12 px-4 z-30 relative">
               <p className="text-zinc-500 font-figtree font-medium text-lg mb-10 text-center leading-[160%]">
                 Trusted by leading brands and startups
               </p>
-              <div className="flex justify-center items-center gap-8 overflow-x-auto whitespace-nowrap pb-4 opacity-70">
+              <div className="flex justify-center items-center gap-8 overflow-x-auto whitespace-nowrap pb-10 sm:pb-18 opacity-70 scrollbar-hide">
                 <Image
                   src="/home/galileo.png"
                   alt="Galileo"
