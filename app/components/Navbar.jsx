@@ -14,17 +14,43 @@ const Navbar = () => {
 
   // Handle scroll to apply blur background when navbar is scrolled
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 10);
+      };
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
-  // Toggle side menu open/close
+  // Close menu if clicking outside
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (
+        isMenuOpen &&
+        sideMenuRef.current &&
+        !sideMenuRef.current.contains(e.target)
+      ) {
+        setIsMenuOpen(false);
+        setIsMobileServicesOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
+    setIsMobileServicesOpen(false);
   };
 
   return (
@@ -51,9 +77,14 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Main Navbar */}
+      {/* Overlay Background when menu is open */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black/30" onClick={toggleMenu} />
+      )}
+
+      {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full px-5 lg:px-8 xl:px-[8%] py-6 flex justify-between items-center font-figtree z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full px-5 lg:px-8 xl:px-[8%] py-6 flex justify-between items-center font-figtree z-[60] transition-all duration-300 ${
           isScrolled
             ? "bg-white/50 backdrop-blur-lg shadow-sm"
             : "bg-transparent"
@@ -70,7 +101,7 @@ const Navbar = () => {
           />
         </a>
 
-        {/* Desktop Nav Links */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 text-lg font-normal leading-[160%] text-zinc-900">
           <a href="/">Home</a>
           <div
@@ -128,17 +159,17 @@ const Navbar = () => {
         </div>
 
         {/* CTA + Hamburger */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-[100]">
           <a
             href="/contact"
             className="hidden md:flex items-center gap-2.5 bg-zinc-900 hover:bg-blue-600 transition text-white px-5 py-2.5 rounded-full text-base"
           >
-            <Icon icon="iconoir:mail" width={22} height={22} />
+            <Icon icon="iconoir:mail" className="z-70" width={22} height={22} />
             <span className="font-medium leading-[230%]">Get In Touch</span>
           </a>
 
-          {/* Mobile Hamburger */}
-          <button onClick={toggleMenu} className="block md:hidden p-2 z-50">
+          {/* Hamburger / Close Button */}
+          <button onClick={toggleMenu} className="block md:hidden p-2 z-[100]">
             <Icon
               icon={isMenuOpen ? "carbon:close" : "tabler:menu"}
               width={24}
@@ -150,7 +181,7 @@ const Navbar = () => {
         {/* Mobile Side Menu */}
         <div
           ref={sideMenuRef}
-          className={`md:hidden fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-40 px-6 py-10 flex flex-col gap-6 transform transition-transform duration-300 ${
+          className={`md:hidden fixed top-0 right-0 w-64 h-full bg-white z-[70] shadow-lg px-6 py-14 flex flex-col gap-6 transform transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
