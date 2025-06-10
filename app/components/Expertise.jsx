@@ -94,9 +94,9 @@ const Expertise = () => {
             >
               <div
                 className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
-                style={{ width: "350px", height: "450px" }}
+                style={{ width: "380px", height: "480px" }}
               >
-                <div className="relative w-40 h-40 mb-10 pointer-events-none">
+                <div className="relative w-50 h-50 mb-10 pointer-events-none">
                   <Image
                     src={img}
                     alt={title}
