@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-20 overflow-hidden bg-white">
+    <section className="relative py-15 sm:py-0 sm:pt-25 overflow-hidden bg-white">
       <div className="absolute top-5 right-0 z-10">
         <Image
           src="/home/BG lines.png"
@@ -37,15 +37,15 @@ export default function Testimonials() {
           height={2880}
           width={2400}
           priority
-          className="opacity-40"
+          className="opacity-100 sm:opacity-40"
         />
       </div>
       {/* Heading */}
-      <div className="text-center mb-12 relative z-30">
-        <h2 className="font-sen text-3xl md:text-5xl text-zinc-900 font-normal mb-4">
+      <div className="text-center relative z-30">
+        <h2 className="font-sen text-[28px] sm:text-6xl text-zinc-900 font-normal mb-4">
           Testimonials
         </h2>
-        <p className="max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-14 font-normal">
+        <p className="max-w-xs sm:max-w-2xl mx-auto text-center font-figtree text-zinc-500 text-lg mb-8 sm:mb-20 font-normal">
           At Farasha Digital, client feedback drives our growth and inspires us
           to deliver innovative solutions and build lasting partnerships.
         </p>
@@ -66,46 +66,45 @@ export default function Testimonials() {
         height={200}
         className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 z-40 hidden md:block"
       />
-
       {/* Cards */}
-      <div className="overflow-x-auto px-4 relative z-20 scrollbar-hide mb-10">
-        <div className="flex gap-6 md:gap-10 w-max px-2 md:px-20">
+      <div className="overflow-x-auto px-4 relative z-20 scrollbar-hide">
+        <div className="flex gap-6 md:gap-7.5 w-max px-2 md:px-20">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[380px] md:min-w-[450px] max-w-[450px] bg-white border border-neutral-200 rounded-xl shadow-sm p-6 shrink-0 flex flex-col hover:bg-violet-50"
+              className="min-w-[380px] md:min-w-[450px] max-w-[450px] md:max-w-[470px] bg-white border border-neutral-200 rounded-xl shadow-sm p-10 shrink-0 flex flex-col hover:bg-violet-50"
             >
               {/* Avatar & Quote */}
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-2 mb-4 sm:mb-2">
                 <Image
                   src={testimonial.avatar}
                   alt="avatar"
-                  width={55}
-                  height={55}
+                  width={80}
+                  height={80}
                   className="rounded-full"
                 />
-                <h3 className="font-sen text-zinc-900 font-bold text-lg">
+                <h3 className="font-sen text-zinc-900 font-bold text-2xl leading-[100%]">
                   “{testimonial.quote}”
                 </h3>
               </div>
 
               {/* Text */}
-              <p className="font-figtree text-zinc-700 mb-6 flex-grow">
+              <p className="font-figtree text-zinc-700 flex-grow text-lg leading-[160%] mb-4 sm:mb-2">
                 {testimonial.text}
               </p>
 
               {/* Name & Company & Logo fixed at bottom */}
-              <div className="flex items-center justify-between text-sm text-zinc-900 font-semibold mt-auto">
+              <div className="flex items-center justify-between text-sm text-zinc-900 mt-auto">
                 <div>
-                  <p>{testimonial.name}</p>
-                  <p className="font-figtree text-zinc-500 text-sm">
+                  <p className="font-bold leading-[142%]">{testimonial.name}</p>
+                  <p className="font-figtree text-zinc-500 text-sm font-normal leading-[160%]">
                     {testimonial.company}
                   </p>
                 </div>
                 <Image
                   src="/home/sisyphus.png"
                   alt="Sisyphus logo"
-                  width={80}
+                  width={100}
                   height={40}
                 />
               </div>
@@ -113,6 +112,13 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
+      <Image
+        src="/home/overlay5.png"
+        alt="bottom overlay"
+        width={1440}
+        height={185}
+        className="hidden md:block relative z-40"
+      />
     </section>
   );
 }
