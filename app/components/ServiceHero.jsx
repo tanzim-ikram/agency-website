@@ -33,7 +33,7 @@ const ServiceHero = () => {
           height={950}
           className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 z-0 hidden md:block"
         />
-        <div className="hidden sm:absolute -bottom-30 right-0 z-10 pointer-events-none">
+        <div className="hidden sm:block absolute bottom-0 right-0 z-10 pointer-events-none">
           <Image
             src="/services/BG Gr Bottom.svg"
             alt="Background Gradient Bottom"

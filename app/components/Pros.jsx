@@ -36,7 +36,7 @@ const Pros = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* Background images confined to the Solutions section */}
-      <div className="absolute top-0 -right-5 -z-10">
+      <div className="hidden sm:absolute top-0 -right-5 -z-10">
         <Image
           src="/services/BG1.svg"
           alt="Background"
@@ -45,44 +45,55 @@ const Pros = () => {
           priority
         />
       </div>
+      <div className="absolute sm:hidden -top-80 right-0 -z-10">
+        <Image
+          src="/services/BG2.svg"
+          alt="Background"
+          height={300}
+          width={400}
+          priority
+        />
+      </div>
 
       {/* Main content */}
       <section className="relative max-w-7xl mx-auto px-6 py-16 bg-transparent mb-20 mt-10">
         {/* Heading */}
-        <h2 className="flex justify-center items-center gap-4 font-sen font-normal text-6xl text-zinc-900 mb-16 relative z-10">
+        <h2 className="flex justify-center items-center gap-4 font-sen font-normal text-[28px] sm:text-5xl md:text-6xl text-zinc-900 mb-16 relative z-10">
           All pros{" "}
           <Image
             src="/services/text-img2.png"
             alt="Impact icon"
-            width={160}
-            height={80}
-            className="inline rounded-full"
+            width={180}
+            height={70}
             priority
+            className="object-none object-left rounded-full  w-[90] h-[50] sm:w-[180] sm:h-[70]"
           />{" "}
           No cons
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 relative z-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center relative z-10 max-w-4xl mx-auto">
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-md hover:bg-violet-50"
+              className="rounded-xl p-6 bg-white/50 backdrop-blur-sm shadow-xs border border-violet-50 w-[350px] h-[330px] sm:w-md sm:h-auto hover:bg-violet-50"
             >
               <Image
                 src={`/services/${icon}`}
                 alt={`${title} icon`}
                 width={48}
                 height={48}
-                className="mb-4"
+                className="mb-3"
                 priority
               />
-              <h3 className="font-medium text-zinc-900 text-2xl mb-2"
+              <h3
+                className="font-medium font-figtree text-zinc-900 text-2xl mb-3 max-w-3xs sm:max-w-xs"
                 style={{ lineHeight: "135%" }}
               >
                 {title}
               </h3>
-              <p className="text-lg text-zinc-500 font-normal leading-relaxed"
+              <p
+                className="text-lg text-zinc-500 font-normal font-figtree max-w-xs sm:max-w-md"
                 style={{ lineHeight: "160%" }}
               >
                 {description}
