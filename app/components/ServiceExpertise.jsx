@@ -44,9 +44,9 @@ const expertiseCards = [
 const ServiceExpertise = () => {
   return (
     <div>
-      <section className="relative py-20 bg-white overflow-hidden">
+      <section className="relative block py-20 bg-white overflow-hidden">
         {/* Background image with opacity 10% and rotated 75deg */}
-        <div className="absolute -top-10 left-0 z-0">
+        <div className="hidden sm:absolute -top-10 left-0 z-0">
           <Image
             src="/services/BG.svg"
             alt="Background"
@@ -57,49 +57,51 @@ const ServiceExpertise = () => {
         </div>
 
         {/* Cards grid */}
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8 px-4 relative z-10">
-          {expertiseCards.map(({ id, title, desc, img }) => (
-            <div
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-10 sm:gap-7.5 px-4 relative z-20">
+          {expertiseCards.map(({ id, title, desc, img, link }) => (
+            <a
+              href={link}
               key={id}
-              className="relative cursor-pointer rounded-lg p-6 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
-              style={{
-                width: "300px",
-                height: "380px",
-              }}
+              className="no-underline"
+              style={{ textDecoration: "none" }}
             >
-              <div className="relative w-40 h-40 mb-6 pointer-events-none">
-                <Image
-                  src={img}
-                  alt={title}
-                  layout="fill"
-                  objectFit="contain"
-                  priority
-                />
+              <div
+                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
+                style={{ width: "380px", height: "480px" }}
+              >
+                <div className="relative w-50 h-50 mb-10 pointer-events-none">
+                  <Image
+                    src={img}
+                    alt={title}
+                    layout="fill"
+                    objectFit="contain"
+                    priority
+                  />
+                </div>
+
+                <div className="absolute top-4 right-4 text-zinc-900 transition pointer-events-none">
+                  <Icon icon="mage:arrow-up-right" width="24" height="24" />
+                </div>
+
+                <h3 className="text-zinc-900 font-medium font-sen text-2xl mb-2.5 leading-[135%]">
+                  {title}
+                </h3>
+                <p className="text-zinc-500 font-normal font-figtree text-lg leading-[160%]">
+                  {desc}
+                </p>
+
+                <style jsx>{`
+                  div.group:hover {
+                    background: linear-gradient(
+                      151.36deg,
+                      #fef8ff80 8.45%,
+                      #e3ecff80 45.2%,
+                      #cdcaff80 101.49%
+                    );
+                  }
+                `}</style>
               </div>
-
-              {/* Arrow icon positioned at top right */}
-              <div className="absolute top-4 right-4 text-zinc-900 transition pointer-events-none">
-                <Icon icon="mage:arrow-up-right" width="24" height="24" />
-              </div>
-
-              <h3 className="text-zinc-900 font-medium font-sen text-lg mb-2">
-                {title}
-              </h3>
-              <p className="text-zinc-500 font-normal font-figtree text-sm">
-                {desc}
-              </p>
-
-              <style jsx>{`
-                div.group:hover {
-                  background: linear-gradient(
-                    151.36deg,
-                    #fef8ff80 8.45%,
-                    #e3ecff80 45.2%,
-                    #cdcaff80 101.49%
-                  );
-                }
-              `}</style>
-            </div>
+            </a>
           ))}
         </div>
       </section>
