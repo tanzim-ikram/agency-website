@@ -19,7 +19,7 @@ const FrontendHero = () => {
         </div>
 
         {/* Ellipse.svg on top */}
-        <div className="absolute inset-0 z-10">
+        <div className="absolute -bottom-130 sm:-bottom-120 md:-bottom-120 lg:-bottom-50 xl:-bottom-25 right-0 inset-0 z-10">
           <Image
             src="/services/Ellipse.svg"
             alt="Ellipse background"
@@ -30,7 +30,7 @@ const FrontendHero = () => {
         </div>
 
         {/* Left overlay */}
-        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20">
+        <div className="hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 z-20">
           <Image
             src="/services/overlay1.png"
             alt="Left overlay"
@@ -41,7 +41,7 @@ const FrontendHero = () => {
         </div>
 
         {/* Right overlay */}
-        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
+        <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
           <Image
             src="/services/overlay2.svg"
             alt="Right overlay"
@@ -63,17 +63,17 @@ const FrontendHero = () => {
                 priority
               />
             </span>
-            <span className="text-zinc-700 font-medium text-lg">Services</span>
+            <span className="text-zinc-900 font-normal text-lg">Services</span>
           </div>
 
-          <h2 className="font-sen max-w-4xl text-zinc-900 font-normal text-5xl leading-tight mb-8 mt-8 tracking-[-3]"
+          <h2 className="mx-auto font-sen max-w-[350px] sm:max-w-[750px] text-zinc-900 font-normal text-[28px] sm:text-5xl leading-[110%] sm:leading-[140%] mb-8 mt-8 tracking-[-0.84px] sm:tracking-[-1.44px] text-center"
           style={{ lineHeight: "160%"}}
           >
-            Frontend That Speaks to Your <br /> Users – Fast, Fluid, and
+            Frontend That Speaks to Your Users – Fast, Fluid, and
             Functional
           </h2>
 
-          <p className="font-figtree text-zinc-500 text-lg max-w-2xl mx-auto mb-16"
+          <p className="font-figtree text-zinc-500 text-lg max-w-[350px] sm:max-w-2xl mx-auto mb-8 sm:mb-16"
           style={{ lineHeight: "160%"}}
           >
             We craft responsive, high-performance frontends using modern
@@ -84,7 +84,7 @@ const FrontendHero = () => {
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-white text-lg font-semibold font-figtree gap-2 hover:bg-blue-600 transition"
+            className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-7.5 py-3 sm:py-3.5 text-white text-lg font-semibold font-figtree gap-2 sm:gap-2.5 hover:bg-blue-600 transition leading-[175%]"
           >
             Talk to an expert
             <Icon icon="mage:arrow-up-right" width="24" height="24" />
