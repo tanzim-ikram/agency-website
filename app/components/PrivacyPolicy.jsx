@@ -6,15 +6,15 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-white text-center">
       {/* Title Section */}
-      <header className="bg-gradient-to-br from-fuchsia-50 via-indigo-100 to-indigo-200 py-16">
+      <header className="bg-gradient-to-br from-fuchsia-50 via-indigo-100 to-indigo-200 py-15 sm:py-18 px-5 lg:px-8 xl:px-[8%]">
         <h1
-          className="font-sen font-normal text-5xl text-zinc-900 mb-3 mt-16"
+          className="font-sen font-normal text-[28px] sm:text-4xl md:text-5xl text-zinc-900 mb-5 sm:mb-3 mt-16"
           style={{ lineHeight: "1.1" }}
         >
           Privacy Policy
         </h1>
         <p
-          className="font-figtree font-normal text-lg text-zinc-500 max-w-4xl mx-auto"
+          className="font-figtree font-normal text-lg text-zinc-500 sm:max-w-4xl mx-auto max-w-sm"
           style={{ lineHeight: "1.6" }}
         >
           At Farasha Digital, we are committed to protecting your privacy. This
@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
 
         <button
           type="button"
-          className="mt-8 px-6 py-3 rounded-full font-figtree font-semibold text-lg bg-gradient-to-br from-fuchsia-50/10 via-indigo-100/80 to-indigo-200/80"
+          className="mt-8 px-5 py-3.5 rounded-full font-figtree font-semibold text-lg bg-gradient-to-br from-fuchsia-50/10 via-indigo-100/80 to-indigo-200/80"
           style={{
             color: "rgba(0, 0, 0, 0.7)",
           }}
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
       </header>
 
       {/* Content Section */}
-      <main className="mt-16 max-w-3xl mx-auto text-left space-y-14 text-zinc-700 font-figtree font-normal text-[16px] mb-16">
+      <main className="pt-15 sm:pt-20 max-w-xs sm:max-w-3xl mx-auto text-left space-y-14 text-zinc-700 font-figtree font-normal text-[16px] mb-16">
         {/* Section */}
         <section>
           <h2 className="font-figtree font-medium text-2xl text-zinc-900 text-center mb-4">
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
           </p>
         </section>
         <hr
-          className="relative h-0.5 border-0 z-40 mb-40"
+          className="hidden sm:block relative h-0.5 border-0 z-40 mb-40"
           style={{
             background: "#E5E5E5",
           }}
@@ -158,9 +158,9 @@ const PrivacyPolicy = () => {
       />
 
       {/* Footer */}
-      <footer className="relative z-40 bg-white py-10 px-5 lg:px-8 xl:px-[8%] mx-auto flex flex-col items-center">
+      <footer className="relative z-40 bg-white px-4 py-15 sm:py-12 sm:px-6 lg:px-8 xl:px-[8%] mx-auto flex flex-col items-center w-full">
         {/* Main Footer Content */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full flex flex-col items-start gap-y-6 md:flex-row md:items-center md:justify-between md:gap-y-0">
           <div className="flex items-center gap-2">
             <Image
               src="/logo.svg"
@@ -171,8 +171,8 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Wrap nav in a flex container centered */}
-          <div className="flex justify-center w-full md:w-auto">
-            <nav className="flex gap-6 mt-6 md:mt-0 font-figtree font-normal text-lg text-zinc-900">
+          <div className="flex w-full md:w-auto">
+            <nav className="flex w-full md:w-auto justify-start md:justify-center gap-6 sm:gap-6 font-figtree font-normal leading-[160%] text-base sm:text-lg text-zinc-900 items-center text-center">
               <a href="#" className="hover:underline">
                 Home
               </a>
@@ -188,7 +188,7 @@ const PrivacyPolicy = () => {
             </nav>
           </div>
 
-          <div className="inline-flex items-center gap-2 mt-6 md:mt-0 text-zinc-500">
+          <div className="inline-flex items-center gap-3 text-zinc-500">
             {/* Social Icons */}
             <a
               href="#"
@@ -220,20 +220,19 @@ const PrivacyPolicy = () => {
             </a>
           </div>
         </div>
-
-        {/* Wrap copyright links in a flex container centered */}
-        <div className="flex justify-center w-full">
-          <div className="mt-8 pt-4 flex flex-col items-center text-zinc-500 text-sm font-figtree gap-2 lg:gap-6 md:flex-row md:justify-center md:gap-6">
-            <p>© 2024 Farasha.Digital</p>
-            <a href="#" className="hover:underline">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:underline">
-              Terms of Service
-            </a>
-          </div>
-        </div>
       </footer>
+      {/* Wrap copyright links in a flex container centered */}
+      <div className="relative z-40 flex justify-center w-full bg-white px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4">
+        <div className="flex flex-row items-center text-zinc-500 leading-[160%] text-xs sm:text-sm font-figtree gap-2 sm:gap-6 md:flex-row md:justify-center md:gap-6">
+          <p>© 2024 Farasha.Digital</p>
+          <a href="./policy" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Terms of Service
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
