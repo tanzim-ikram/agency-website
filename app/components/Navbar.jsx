@@ -81,6 +81,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 bg-black/30" onClick={toggleMenu} />
       )}
+
       {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 w-full px-5 lg:px-8 xl:px-[8%] py-6 flex justify-between items-center font-figtree z-[60] transition-all duration-300 ${
