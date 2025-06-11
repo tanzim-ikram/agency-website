@@ -14,9 +14,9 @@ const ShortFooter = () => {
       />
 
       {/* Footer */}
-      <footer className="relative z-40 bg-white py-10 px-5 lg:px-8 xl:px-[8%] mx-auto flex flex-col items-center">
+      <footer className="relative z-40 bg-white px-4 py-15 sm:py-12 sm:px-6 lg:px-8 xl:px-[8%] mx-auto flex flex-col items-center w-full">
         {/* Main Footer Content */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full flex flex-col items-start gap-y-6 md:flex-row md:items-center md:justify-between md:gap-y-0">
           <div className="flex items-center gap-2">
             <Image
               src="/logo.svg"
@@ -27,8 +27,8 @@ const ShortFooter = () => {
           </div>
 
           {/* Wrap nav in a flex container centered */}
-          <div className="flex justify-center w-full md:w-auto">
-            <nav className="flex gap-6 mt-6 md:mt-0 font-figtree font-normal text-lg text-zinc-900">
+          <div className="flex w-full md:w-auto">
+            <nav className="flex w-full md:w-auto justify-start md:justify-center gap-6 sm:gap-6 font-figtree font-normal leading-[160%] text-base sm:text-lg text-zinc-900 items-center text-center">
               <a href="#" className="hover:underline">
                 Home
               </a>
@@ -44,7 +44,7 @@ const ShortFooter = () => {
             </nav>
           </div>
 
-          <div className="inline-flex items-center gap-2 mt-6 md:mt-0 text-zinc-500">
+          <div className="inline-flex items-center gap-3 text-zinc-500">
             {/* Social Icons */}
             <a
               href="#"
@@ -76,20 +76,19 @@ const ShortFooter = () => {
             </a>
           </div>
         </div>
-
-        {/* Wrap copyright links in a flex container centered */}
-        <div className="flex justify-center w-full">
-          <div className="mt-8 pt-4 flex flex-col items-center text-zinc-500 text-sm font-figtree gap-2 lg:gap-6 md:flex-row md:justify-center md:gap-6">
-            <p>© 2024 Farasha.Digital</p>
-            <a href="./policy" className="hover:underline">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:underline">
-              Terms of Service
-            </a>
-          </div>
-        </div>
       </footer>
+      {/* Wrap copyright links in a flex container centered */}
+      <div className="relative z-40 flex justify-center w-full bg-white px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4">
+        <div className="flex flex-row items-center text-zinc-500 leading-[160%] text-xs sm:text-sm font-figtree gap-2 sm:gap-6 md:flex-row md:justify-center md:gap-6">
+          <p>© 2024 Farasha.Digital</p>
+          <a href="./policy" className="hover:underline">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:underline">
+            Terms of Service
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

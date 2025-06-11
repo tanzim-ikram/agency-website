@@ -101,6 +101,8 @@ const Footer = () => {
             priority
           />
         </div>
+
+        {/* Gradient Line */}
         <hr
           className="relative h-0.5 border-0 z-40"
           style={{
@@ -173,18 +175,18 @@ const Footer = () => {
             </div>
           </div>
         </footer>
-          {/* Wrap copyright links in a flex container centered */}
-          <div className="relative z-40 flex justify-center w-full bg-white px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4">
-            <div className="flex flex-row items-center text-zinc-500 leading-[160%] text-xs sm:text-sm font-figtree gap-2 sm:gap-6 md:flex-row md:justify-center md:gap-6">
-              <p>© 2024 Farasha.Digital</p>
-              <a href="./policy" className="hover:underline">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:underline">
-                Terms of Service
-              </a>
-            </div>
+        {/* Wrap copyright links in a flex container centered */}
+        <div className="relative z-40 flex justify-center w-full bg-white px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4">
+          <div className="flex flex-row items-center text-zinc-500 leading-[160%] text-xs sm:text-sm font-figtree gap-2 sm:gap-6 md:flex-row md:justify-center md:gap-6">
+            <p>© 2024 Farasha.Digital</p>
+            <a href="./policy" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:underline">
+              Terms of Service
+            </a>
           </div>
+        </div>
       </section>
     </div>
   );

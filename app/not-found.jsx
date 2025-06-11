@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Navbar from "./components/Navbar";
+import dynamic from "next/dynamic";
+const Navbar = dynamic(() => import("./components/Navbar"), { ssr: false });
 import ShortFooter from "./components/ShortFooter";
 
 // app/not-found.jsx
@@ -32,16 +33,16 @@ export default function NotFound() {
         </div>
 
         {/* Center Content */}
-        <div className="relative z-20 flex flex-col items-center mt-30 mb-40">
+        <div className="relative z-20 flex flex-col items-center py-20">
           <Image
             src="/contact/error.svg"
             alt="Lost Icon"
             width={350}
             height={170}
-            className="mb-10"
+            className="mb-6 sm:mb-10 w-100 h-30 sm:w-120 sm:h-50"
           />
           <p
-            className="flex items-center gap-2 px-5 py-[14px] text-[18px] font-figtree font-semibold leading-[120%] text-[rgba(0,0,0,0.70)] rounded-[24px] mb-6"
+            className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-[14px] text-[14px] sm:text-[18px] font-figtree font-semibold  leading-[120%] text-[rgba(0,0,0,0.70)] rounded-[24px] mb-6"
             style={{
               background:
                 "linear-gradient(133deg, rgba(254, 248, 255, 0.50) -3.51%, rgba(227, 236, 255, 0.50) 43.03%, rgba(205, 202, 255, 0.50) 114.33%)",
@@ -49,10 +50,10 @@ export default function NotFound() {
           >
             404 Error
           </p>
-          <h1 className="text-6xl font-sen font-normal text-[#18191C] text-center leading-[110%] tracking-[-1.8px] mb-4">
+          <h1 className="sm:text-6xl text-[28px] font-sen font-normal text-[#18191C] text-center leading-[110%] tracking-[-1.8px] mb-4">
             We've lost this page
           </h1>
-          <p className="text-[#79747E] font-figtree text-lg font-normal leading-[160%] text-center max-w-xl">
+          <p className="text-[#79747E] font-figtree text-lg font-normal leading-[160%] text-center sm:max-w-xl max-w-xs">
             Sorry, this page you are looking for doesn't exist or has been
             removed.
           </p>
