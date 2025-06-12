@@ -72,11 +72,11 @@ const Pros = () => {
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center relative z-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 justify-items-center relative z-10 max-w-5xl mx-auto px-4">
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="rounded-xl p-6 bg-white/50 backdrop-blur-sm shadow-xs border border-violet-50 w-[350px] h-[330px] sm:w-md sm:h-auto hover:bg-violet-50"
+              className="rounded-xl p-6 bg-white/50 backdrop-blur-sm shadow-xs border border-violet-50 w-full min-w-[350px] hover:bg-violet-50 transition-colors duration-300"
             >
               <Image
                 src={`/services/${icon}`}
@@ -87,13 +87,13 @@ const Pros = () => {
                 priority
               />
               <h3
-                className="font-medium font-figtree text-zinc-900 text-2xl mb-3 max-w-3xs sm:max-w-xs"
+                className="font-medium font-figtree text-zinc-900 text-2xl mb-3"
                 style={{ lineHeight: "135%" }}
               >
                 {title}
               </h3>
               <p
-                className="text-lg text-zinc-500 font-normal font-figtree max-w-xs sm:max-w-md"
+                className="text-lg text-zinc-500 font-normal font-figtree"
                 style={{ lineHeight: "160%" }}
               >
                 {description}

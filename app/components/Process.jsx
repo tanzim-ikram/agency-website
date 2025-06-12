@@ -20,9 +20,11 @@ const steps = [
   },
 ];
 
+const demotext = "At abc Technology, our front-end developers are not just coding; they're crafting state-of-the-art digital experiences in front-end development. Our strength is in crafting stunning websites and responsive applications with an impressive user interface (UI). Our dedicated team guarantees an app that excels across multiple platforms, delivering quality, speed, stability, and a seamless user experience."
+
 const Process = () => {
   return (
-    <div className="relative max-w-7xl mx-auto px-6 py-16 text-center overflow-hidden">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-15 sm:py-16 text-center overflow-hidden">
       {/* Background Ellipse */}
       <div className="absolute top-0 right-0 z-0">
         <Image
@@ -36,21 +38,21 @@ const Process = () => {
       </div>
 
       {/* Title & Subtitle */}
-      <div className="relative flex flex-col max-w-4xl mx-auto text-center mb-16 z-10 gap-10">
+      <div className="relative flex flex-col max-w-4xl mx-auto text-center mb-4 sm:mb-16 z-10 gap-6 sm:gap-10">
         <h1
-          className="font-sen text-4xl md:text-5xl font-normal text-zinc-900"
+          className="font-sen text-[28px] sm:text-4xl md:text-5xl font-normal text-zinc-900"
           style={{ lineHeight: "140%" }}
         >
           Our process
         </h1>
         <p
-          className="font-figtree text-zinc-900 text-lg md:text-2xl font-medium"
+          className="hidden sm:block font-figtree text-zinc-900 text-lg md:text-2xl font-medium"
           style={{ lineHeight: "135%" }}
         >
           Journey Through Our Development Process
         </p>
         <p
-          className="font-figtree text-base md:text-lg text-left text-zinc-500 font-normal"
+          className="font-figtree text-lg text-left text-zinc-500 font-normal"
           style={{ lineHeight: "160%" }}
         >
           At abc Technology, our front-end developers are not just coding;
@@ -60,26 +62,41 @@ const Process = () => {
           dedication to guarantees an app that excels across multiple platforms,
           delivering quality, speed, stability, and a seamless user experience.
         </p>
+        <p
+          className="sm:hidden font-figtree text-zinc-900 text-lg md:text-2xl px-30 sm:px-0 font-medium"
+          style={{ lineHeight: "135%" }}
+        >
+          Journey Through Our Development Process
+        </p>
       </div>
 
-      {/* Mobile layout: stacked cards */}
-      <div className="block md:hidden w-full max-w-xl gap-8 mx-auto">
-        {steps.map(({ id, text }) => (
-          <div key={id} className="flex flex-col items-center">
-            <div className="w-full px-4">
-              <div className="flex flex-col items-center">
-                <div className="w-14 h-14 rounded-full bg-white border border-zinc-200 shadow-sm flex items-center justify-center text-zinc-900 font-semibold text-xl font-figtree mb-4">
-                  {id}
-                </div>
-                <div className="bg-white border border-zinc-200 rounded-full shadow-sm px-6 py-5 w-full">
-                  <p className="font-figtree text-zinc-700 text-base leading-relaxed text-center">
-                    {text}
-                  </p>
-                </div>
+      {/* Mobile layout: Vertical Timeline */}
+      <div className="block md:hidden relative w-full max-w-xl mx-auto px-4">
+        <div className="flex flex-col items-center space-y-8">
+          {steps.map(({ id, text }) => (
+            <div
+              key={id}
+              className="relative w-full flex flex-col items-center text-center"
+            >
+              {/* Number circle */}
+              <div
+                className="flex w-15 h-15 rounded-full backdrop-blur-xs items-center justify-center text-zinc-900 font-semibold text-xl font-figtree mb-3 z-10"
+                style={{
+                  background:
+                    "linear-gradient(to bottom right, #FEF8FF 0%, #E3ECFF 40%, #CDCAFF 100%)",
+                }}
+              >
+                {id}
               </div>
+              {/* Text */}
+              <p
+                className="font-figtree text-zinc-500 text-lg max-w-md leading-[160%] mb-8"
+              >
+                {demotext}
+              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Desktop layout: vertical timeline with centered merged cards */}
@@ -156,7 +173,7 @@ const Process = () => {
 
       {/* Bottom paragraph */}
       <p
-        className="font-figtree text-lg text-zinc-500 max-w-4xl mx-auto mt-30 leading-relaxed text-left mb-6"
+        className="font-figtree text-lg text-zinc-500 max-w-4xl mx-auto mt-10 md:mt-30 leading-relaxed text-left mb-6"
         style={{ lineHeight: "160%" }}
       >
         At abc Technology, our front-end developers are not just coding; they're
