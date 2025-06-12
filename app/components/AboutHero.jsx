@@ -35,7 +35,7 @@ const AboutHero = () => {
               <span className="text-zinc-500">To</span> Know
               <div className="inline-block mt-2 sm:mt-0">
                 <Image
-                  src="/about/Text-Img1.png"
+                  src="/about/about-text-img1.png"
                   alt="Handshake"
                   width={140}
                   height={80}

@@ -40,7 +40,7 @@ const AboutFooter = () => {
             <h2 className="font-sen text-zinc-900 text-[28px] sm:text-4xl lg:text-6xl leading-tight font-normal">
               Get in touch{" "}
               <Image
-                src="/about/text-img1.png"
+                src="/about/about-text-img1.png"
                 alt="Text Icon"
                 width={140}
                 height={64}

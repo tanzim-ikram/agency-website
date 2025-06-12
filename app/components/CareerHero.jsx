@@ -64,7 +64,7 @@ const CareerHero = () => {
             <span className="flex items-center gap-4 whitespace-nowrap">
               We are Hiring
               <Image
-                src="/career/text-img2.png"
+                src="/career/Career-Text-Img2.png"
                 alt="Text image"
                 width={140}
                 height={64}

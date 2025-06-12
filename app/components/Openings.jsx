@@ -31,7 +31,7 @@ const jobs = [
 
 const Openings = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 relative z-10">
+    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 relative z-10">
       <div className="max-w-5xl mx-auto">
         {/* BG Ellipse */}
         <div className="absolute top-0 right-0 -z-10">

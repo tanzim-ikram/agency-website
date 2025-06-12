@@ -82,7 +82,7 @@ const Benefits = () => {
           <span>
             Our perks{" "}
             <Image
-              src="/career/text-img1.png"
+              src="/career/Career-Text-Img1.png"
               alt="Impact icon 3"
               width={168}
               height={50}
