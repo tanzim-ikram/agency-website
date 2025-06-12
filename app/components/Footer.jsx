@@ -127,16 +127,16 @@ const Footer = () => {
             {/* Wrap nav in a flex container centered */}
             <div className="flex w-full md:w-auto">
               <nav className="flex w-full md:w-auto justify-start md:justify-center gap-6 sm:gap-6 font-figtree font-normal leading-[160%] text-base sm:text-lg text-zinc-900 items-center text-center">
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                   Home
                 </a>
-                <a href="#" className="hover:underline">
+                <a href="/services" className="hover:underline">
                   Services
                 </a>
-                <a href="#" className="hover:underline">
+                <a href="/about" className="hover:underline">
                   About Us
                 </a>
-                <a href="#" className="hover:underline">
+                <a href="/career" className="hover:underline">
                   Career
                 </a>
               </nav>
@@ -179,7 +179,7 @@ const Footer = () => {
         <div className="relative z-40 flex justify-center w-full bg-white px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4">
           <div className="flex flex-row items-center text-zinc-500 leading-[160%] text-xs sm:text-sm font-figtree gap-2 sm:gap-6 md:flex-row md:justify-center md:gap-6">
             <p>© 2024 Farasha.Digital</p>
-            <a href="./policy" className="hover:underline">
+            <a href="/policy" className="hover:underline">
               Privacy Policy
             </a>
             <a href="#" className="hover:underline">

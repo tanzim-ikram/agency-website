@@ -29,7 +29,7 @@ const ShortFooter = () => {
           {/* Wrap nav in a flex container centered */}
           <div className="flex w-full md:w-auto">
             <nav className="flex w-full md:w-auto justify-start md:justify-center gap-6 sm:gap-6 font-figtree font-normal leading-[160%] text-base sm:text-lg text-zinc-900 items-center text-center">
-              <a href="/home" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Home
               </a>
               <a href="/services" className="hover:underline">
