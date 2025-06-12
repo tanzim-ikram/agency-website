@@ -36,41 +36,44 @@ const WhatWeDo = () => {
   return (
     <div>
       {/* Main content */}
-      <section className="relative max-w-7xl mx-auto px-6 py-20 bg-transparent mt-10">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-15 sm:py-20 bg-transparent mt-10">
         {/* Heading */}
         <h2
-          className="flex justify-center items-center gap-4 font-sen font-normal text-6xl text-zinc-900 mb-16 relative z-10"
+          className="flex flex-col sm:flex-row justify-center items-center gap-3 font-sen font-normal text-[28px] sm:text-4xl lg:text-6xl text-zinc-900 mb-6 sm:mb-16 relative z-10"
           style={{ lineHeight: "110%" }}
         >
-          Why We Do{" "}
-          <Image
-            src="/about/text-img2.png"
-            alt="Impact icon 3"
-            width={120}
-            height={80}
-            className="inline rounded-full"
-            priority
-          />{" "}
-          What We Do
+          <span className="relative flex items-center gap-4">
+            Why We Do{" "}
+            <div className="relative overflow-hidden w-32.5 h-12.5 sm:w-30 sm:h-17.5">
+              <Image
+                src="/about/text-img2.png"
+                alt="Impact icon 3"
+                fill
+                className="inline object-none object-center sm:object-cover rounded-full"
+                priority
+              />{" "}
+            </div>
+          </span>
+          <span>What We Do</span>
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center relative z-10 max-w-5xl mx-auto">
+        <div className="min-w-[295px] min-h-[278px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 justify-center relative z-10 max-w-5xl mx-auto">
           {industries.map(({ id, icon, title, description }) => (
             <div
               key={id}
-              className="rounded-xl p-6 bg-white shadow-xs border border-violet-50 max-w-xl hover:bg-violet-50"
+              className="rounded-xl p-6 bg-white/50 shadow-xs border border-violet-50 max-w-xl hover:bg-violet-50"
             >
               <Image
                 src={`/about/${icon}`}
                 alt={`${title} icon`}
                 width={48}
                 height={48}
-                className="mb-4"
+                className="mb-3"
                 priority
               />
               <h3
-                className="font-medium text-zinc-900 text-2xl mb-2"
+                className="font-medium text-zinc-900 text-2xl mb-3"
                 style={{ lineHeight: "135%" }}
               >
                 {title}

@@ -146,7 +146,7 @@ const AboutHero = () => {
             height={500}
             className="h-100 w-120 object-cover"
             />
-          </div>
+          </div> 
         </div>
 
         <div className="absolute md:relative z-20 bottom-10 overflow-hidden">
