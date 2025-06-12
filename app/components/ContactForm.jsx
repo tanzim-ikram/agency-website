@@ -6,36 +6,26 @@ const ContactForm = () => {
     <div>
       <section className="relative min-h-screen bg-white flex flex-col items-center justify-center px-6 pt-40 pb-24">
         {/* Background Images */}
-        <div className="absolute left-0 top-0 z-0">
+        <div className="absolute left-0 top-30 lg:top-0 z-0">
           <Image
             src="/contact/BG3.svg"
             alt="Background Left"
             width={1000}
             height={1000}
-            className="pointer-events-none"
-          />
-        </div>
-        <div className="absolute -bottom-30 left-0 inset-0 z-10   ">
-          <Image
-            src="/services/Ellipse.svg"
-            alt="Ellipse background"
-            layout="fill"
-            objectFit="contain"
-            priority
-            className="pointer-events-none"
+            className="pointer-events-none lg:w-full lg:h-full w-100 h-100"
           />
         </div>
 
         {/* Heading */}
         <div className="relative z-10 text-center mb-17.5">
-          <h1 className="text-zinc-900 font-sen text-6xl font-normal leading-[110%]">
+          <h1 className="text-zinc-900 font-sen text-[28px] sm:text-4xl md:text-6xl font-normal leading-[110%] gap-4 flex items-center">
             Get in
             <Image
               src="/contact/text-img2.png"
               alt="Handshake"
-              width={140}
-              height={80}
-              className="inline-block rounded-full mx-4"
+              width={120}
+              height={70}
+              className="inline-block rounded-full sm:w-30 sm:h-17.5 w-21 h-12.5"
             />
             touch
           </h1>
@@ -44,7 +34,7 @@ const ContactForm = () => {
         {/* Form */}
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="relative z-10 flex flex-col w-[605px] items-start gap-6"
+          className="relative z-10 flex flex-col min-w-md sm:w-[605px] items-start gap-6"
         >
           <input
             type="text"
@@ -82,6 +72,15 @@ const ContactForm = () => {
             />
           </button>
         </form>
+        <div className="absolute bottom-0 right-0 z-0">
+          <Image
+            src="/services/Ellipse.svg"
+            alt="Background"
+            height={1440}
+            width={1440}
+            priority
+          />
+        </div>
       </section>
     </div>
   );

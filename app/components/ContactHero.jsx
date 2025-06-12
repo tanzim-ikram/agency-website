@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 
 const ContactHero = () => {
   return (
@@ -13,7 +12,7 @@ const ContactHero = () => {
             height={1000}
             width={2400}
             priority
-            className="pointer-events-none"
+            className="pointer-events-none sm:opacity-100 opacity-70"
           />
         </div>
 
@@ -46,16 +45,18 @@ const ContactHero = () => {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-40 text-center">
-          <h1 className="flex justify-center items-center gap-4 font-sen font-normal text-6xl text-zinc-900 mb-11 relative z-10">
-            <span>Contact our</span>
-            <Image
-              src="/contact/text-img1.png"
-              alt="Friendly Icon"
-              width={140}
-              height={64}
-              className="inline rounded-full"
-              priority
-            />
+          <h1 className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 font-sen font-normal text-[28px] sm:text-4xl lg:text-6xl text-zinc-900 mb-8 sm:mb-10.5 relative z-10">
+            <span className="flex gap-1 sm:gap-4 items-center">
+              Contact our
+              <Image
+                src="/contact/text-img1.png"
+                alt="Friendly Icon"
+                width={140}
+                height={64}
+                className="inline rounded-full w-26 h-12.5 sm:w-35 sm:h-17.5"
+                priority
+              />
+            </span>
             <span className="text-zinc-500">Friendly team</span>
           </h1>
 
@@ -67,23 +68,18 @@ const ContactHero = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-10 z-10">
           {/* Card 1 */}
-          <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
-            <Image
-              src="/contact/chat.svg"
-              alt="Chat"
-              width={40}
-              height={40}
-            />
+          <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-6 sm:p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
+            <Image src="/contact/chat.svg" alt="Chat" width={40} height={40} />
             <div>
-              <h3 className="text-zinc-900 font-sen text-[24px] font-medium leading-[30px] mb-1">
+              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
                 Chat to sales
               </h3>
-              <p className="text-zinc-500 font-figtree text-[14px] font-normal leading-[24px] mb-2">
+              <p className="text-zinc-500 font-figtree text-[14px] font-normal leading-[24px] mb-1.5 sm:mb-2">
                 Speak to our support team
               </p>
               <a
                 href="mailto:support@email.com"
-                className="text-lg font-figtree font-semibold leading-[24px] text-black/70 underline"
+                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[175%] text-black/70 underline"
               >
                 support@email.com
               </a>
@@ -99,7 +95,7 @@ const ContactHero = () => {
               height={40}
             />
             <div>
-              <h3 className="text-zinc-900 font-sen text-2xl font-medium leading-[30px] mb-1">
+              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
                 Visit us
               </h3>
               <p className="text-zinc-500 font-figtree text-sm font-normal leading-[24px] mb-2">
@@ -107,7 +103,7 @@ const ContactHero = () => {
               </p>
               <a
                 href="#"
-                className="text-lg font-figtree font-semibold leading-[24px] text-black/70 underline"
+                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[24px] text-black/70 underline"
               >
                 View on Google map
               </a>
@@ -116,14 +112,9 @@ const ContactHero = () => {
 
           {/* Card 3 */}
           <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
-            <Image
-              src="/contact/call.svg"
-              alt="Call"
-              width={40}
-              height={40}
-            />
+            <Image src="/contact/call.svg" alt="Call" width={40} height={40} />
             <div>
-              <h3 className="text-zinc-900 font-sen text-2xl font-medium leading-[30px] mb-1">
+              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
                 Call us
               </h3>
               <p className="text-zinc-500 font-figtree text-sm font-normal leading-[24px] mb-2">
@@ -131,7 +122,7 @@ const ContactHero = () => {
               </p>
               <a
                 href="tel:+880123456789"
-                className="text-[18px] font-figtree font-semibold leading-[24px] text-black/70 underline"
+                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[24px] text-black/70 underline"
               >
                 +880 1234 56789
               </a>
