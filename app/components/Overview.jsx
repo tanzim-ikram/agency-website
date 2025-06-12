@@ -9,7 +9,7 @@ const Overview = () => {
           <h2
             className="font-sen text-zinc-900 text-[28px] sm:text-[48px] font-normal mb-8 sm:mb-10 text-center"
             style={{ lineHeight: "140%" }}
-          >
+          > 
             Overview
           </h2>
           <p
