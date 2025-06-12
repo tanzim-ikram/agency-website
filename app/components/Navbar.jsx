@@ -14,7 +14,7 @@ const Navbar = () => {
 
   // Handle scroll to apply blur background when navbar is scrolled
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const handleScroll = () => {
         setIsScrolled(window.scrollY > 10);
       };
@@ -165,7 +165,9 @@ const Navbar = () => {
             className="hidden md:flex items-center gap-2.5 bg-zinc-900 hover:bg-blue-600 transition text-white px-5 py-2 rounded-full text-base"
           >
             <Icon icon="iconoir:mail" className="z-70" width={22} height={22} />
-            <span className="font-figtree font-medium leading-[230%]">Get In Touch</span>
+            <span className="font-figtree font-medium leading-[230%]">
+              Get In Touch
+            </span>
           </a>
 
           {/* Hamburger / Close Button */}
@@ -177,63 +179,73 @@ const Navbar = () => {
             />
           </button>
         </div>
-
-        {/* Mobile Side Menu */}
-        <div
-          ref={sideMenuRef}
-          className={`md:hidden fixed top-0 right-0 w-64 h-full bg-white z-[70] shadow-lg px-6 py-14 flex flex-col gap-6 transform transition-transform duration-300 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <a href="/" onClick={toggleMenu}>
-            Home
-          </a>
-          <div className="flex flex-col">
-            <button
-              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-              className="flex items-center justify-between w-full"
-            >
-              <span>Services</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${
-                  isMobileServicesOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-            {isMobileServicesOpen && (
-              <div className="pl-4 mt-2 flex flex-col gap-2">
-                <a href="/services/frontend" onClick={toggleMenu}>
-                  Frontend Development
-                </a>
-                <a href="/services/backend" onClick={toggleMenu}>
-                  Backend Development
-                </a>
-                <a href="/services/mobiledev" onClick={toggleMenu}>
-                  Mobile Development
-                </a>
-                <a href="/services/ai-ml" onClick={toggleMenu}>
-                  AI & Machine Learning
-                </a>
-                <a href="/services/devops" onClick={toggleMenu}>
-                  DevOps & Infrastructure
-                </a>
-                <a href="/services/databases" onClick={toggleMenu}>
-                  Databases
-                </a>
-              </div>
-            )}
-          </div>
-          <a href="/about" onClick={toggleMenu}>
-            About Us
-          </a>
-          <a href="/career" onClick={toggleMenu}>
-            Career
-          </a>
-          <a href="/contact" onClick={toggleMenu}>
-            Contact
-          </a>
-        </div>
       </nav>
+
+      {/* Mobile Side Menu - Now outside the nav element */}
+      <div
+        ref={sideMenuRef}
+        className={`md:hidden fixed top-0 right-0 w-64 h-full bg-white z-[70] shadow-lg px-8 py-6 flex flex-col gap-6 transform transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <div className="flex justify-end">
+          <button
+            onClick={toggleMenu}
+            className="p-1 text-gray-500 hover:text-gray-700"
+          >
+            <Icon icon="carbon:close" width={24} height={24} />
+          </button>
+        </div>
+
+        <a href="/" onClick={toggleMenu}>
+          Home
+        </a>
+        <div className="flex flex-col">
+          <button
+            onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+            className="flex items-center justify-between w-full"
+          >
+            <span><a href="/services">Services</a></span>
+            <ChevronDown
+              className={`w-4 h-4 transition-transform ${
+                isMobileServicesOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+          {isMobileServicesOpen && (
+            <div className="pl-4 mt-2 flex flex-col gap-2">
+              <a href="/services/frontend" onClick={toggleMenu}>
+                Frontend Development
+              </a>
+              <a href="/services/backend" onClick={toggleMenu}>
+                Backend Development
+              </a>
+              <a href="/services/mobiledev" onClick={toggleMenu}>
+                Mobile Development
+              </a>
+              <a href="/services/ai-ml" onClick={toggleMenu}>
+                AI & Machine Learning
+              </a>
+              <a href="/services/devops" onClick={toggleMenu}>
+                DevOps & Infrastructure
+              </a>
+              <a href="/services/databases" onClick={toggleMenu}>
+                Databases
+              </a>
+            </div>
+          )}
+        </div>
+        <a href="/about" onClick={toggleMenu}>
+          About Us
+        </a>
+        <a href="/career" onClick={toggleMenu}>
+          Career
+        </a>
+        <a href="/contact" onClick={toggleMenu}>
+          Contact
+        </a>
+      </div>
     </div>
   );
 };
