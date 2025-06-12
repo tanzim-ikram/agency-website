@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import ShortFooter from "./ShortFooter";
 
 const AboutFooter = () => {
   return (
@@ -33,24 +34,24 @@ const AboutFooter = () => {
         />
 
         {/* Main container */}
-        <div className="relative z-20 max-w-7xl mx-auto py-30 flex flex-row gap-16 items-start">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg-8 xl:px-0 py-15 sm:py-16 md:py-20 lg:py-30 flex md:flex-row flex-col items-center gap-8 sm:gap-16 lg:items-start">
           {/* Left Side */}
           <div className="flex flex-col gap-10">
-            <h2 className="font-sen text-zinc-900 text-6xl leading-tight font-normal">
+            <h2 className="font-sen text-zinc-900 text-[28px] sm:text-4xl lg:text-6xl leading-tight font-normal">
               Get in touch{" "}
               <Image
                 src="/about/text-img1.png"
                 alt="Text Icon"
-                width={160}
-                height={80}
-                className="inline-block align-middle rounded-full mx-1"
+                width={140}
+                height={64}
+                className="inline-block align-middle rounded-full mx-2 sm:mx-4 w-17.5 h-12.5 sm:w-35 sm:h-16"
               />{" "}
               with us.
               <br />
               We're here to assist you
             </h2>
 
-            <div className="mt-25">
+            <div className="mt-8 md:mt-25">
               <Image
                 src="/about/AboutFooterImg.svg"
                 alt="Footer Image"
@@ -64,7 +65,7 @@ const AboutFooter = () => {
           {/* Right Side - Contact Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="w-[420px] h-[450px] flex flex-col gap-5"
+            className="w-[420px] max-w-full flex flex-col gap-5"
           >
             <input
               type="text"
@@ -90,19 +91,21 @@ const AboutFooter = () => {
               className="bg-white border border-black/10 rounded-lg px-5 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm font-figtree text-[rgba(0, 0, 0, 0.70)] font-normal leading-[160%]"
             ></textarea>
 
-            <button
-              type="submit"
-              className="bg-zinc-900 text-white text-lg font-figtree font-normal leading-[175%] px-7.5 py-3.5 rounded-full flex items-center justify-center gap-2 hover:bg-blue-600 transition mt-12"
-            >
-              Leave us a Message
-              <Image
-                src="/icons/message.svg"
-                alt="Message"
-                width={24}
-                height={24}
-              />
-              {/* <Icon icon="mdi:message-text-outline" width={20} height={20} /> */}
-            </button>
+            {/* Center-aligned button */}
+            <div className="flex justify-center mt-8 md:mt-12">
+              <button
+                type="submit"
+                className="w-[260px] sm:w-full bg-zinc-900 text-white text-lg font-figtree font-normal leading-[175%] px-7.5 py-3.5 rounded-full flex items-center justify-center gap-2 hover:bg-blue-600 transition"
+              >
+                Leave us a Message
+                <Image
+                  src="/icons/message.svg"
+                  alt="Message"
+                  width={24}
+                  height={24}
+                />
+              </button>
+            </div>
           </form>
         </div>
 
@@ -114,79 +117,7 @@ const AboutFooter = () => {
           className="absolute bottom-50 left-0 object-cover pointer-events-none z-10"
           priority
         />
-
-        {/* Gradient Divider */}
-        <hr
-          className="relative h-0.5 border-0 z-30"
-          style={{
-            background:
-              "linear-gradient(90deg, #A299FA 0%, #3A93F8 29%, #7DB4F3 51%, #0B3EAA 79%)",
-          }}
-        />
-
-        {/* Footer */}
-        <footer className="relative z-40 bg-white py-10 px-5 lg:px-8 xl:px-[8%] mx-auto flex flex-col items-center">
-          <div className="w-full flex flex-col md:flex-row items-center justify-between">
-            <Image src="/logo.svg" alt="Logo" width={80} height={40} />
-
-            <nav className="flex gap-6 mt-6 md:mt-0 font-figtree font-normal text-lg text-zinc-900">
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-              <a href="#" className="hover:underline">
-                Services
-              </a>
-              <a href="#" className="hover:underline">
-                About Us
-              </a>
-              <a href="#" className="hover:underline">
-                Career
-              </a>
-            </nav>
-
-            <div className="inline-flex items-center gap-2 mt-6 md:mt-0 text-zinc-500">
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="hover:text-zinc-900 transition"
-              >
-                <Icon icon="pajamas:twitter" width="20" height="20" />
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="hover:text-zinc-900 transition"
-              >
-                <Icon icon="ic:outline-facebook" width="26" height="26" />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="hover:text-zinc-900 transition"
-              >
-                <Icon icon="mdi:linkedin" width="26" height="26" />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="hover:text-zinc-900 transition"
-              >
-                <Icon icon="mdi:youtube" width="28" height="28" />
-              </a>
-            </div>
-          </div>
-
-          {/* Copyright Section */}
-          <div className="mt-8 pt-4 flex flex-col items-center text-zinc-500 text-sm font-figtree gap-2 md:flex-row md:justify-center md:gap-6">
-            <p>© 2024 Farasha.Digital</p>
-            <a href="./policy" className="hover:underline">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:underline">
-              Terms of Service
-            </a>
-          </div>
-        </footer>
+        <ShortFooter />
       </section>
     </div>
   );
