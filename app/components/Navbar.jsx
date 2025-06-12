@@ -162,10 +162,10 @@ const Navbar = () => {
         <div className="flex items-center gap-4 relative z-[100]">
           <a
             href="/contact"
-            className="hidden md:flex items-center gap-2.5 bg-zinc-900 hover:bg-blue-600 transition text-white px-5 py-2.5 rounded-full text-base"
+            className="hidden md:flex items-center gap-2.5 bg-zinc-900 hover:bg-blue-600 transition text-white px-5 py-2 rounded-full text-base"
           >
             <Icon icon="iconoir:mail" className="z-70" width={22} height={22} />
-            <span className="font-medium leading-[230%]">Get In Touch</span>
+            <span className="font-figtree font-medium leading-[230%]">Get In Touch</span>
           </a>
 
           {/* Hamburger / Close Button */}
