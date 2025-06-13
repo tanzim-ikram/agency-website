@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Backgrounds */}
-      <div className="absolute inset-0 w-full h-[270px] z-0">
+      <div className="absolute inset-0 w-full h-[270px] z-0 ">
         <Image
           src="/home/BG lines.png"
           alt="Background Lines"
@@ -30,12 +30,12 @@ const Hero = () => {
         <div className="mx-auto py-6 max-w-7xl">
           {/* Heading */}
           <div className="flex flex-col">
-            <h1 className="text-[36px] sm:text-[60px] md:text-[80px] font-normal leading-[120%] text-zinc-900 text-center tracking-[-1.44px] w-full">
+            <h1 className="text-[32px] sm:text-[60px] md:text-[80px] font-normal leading-[120%] text-zinc-900 text-center tracking-[-1.44px] w-full">
               We Fuel Brands
             </h1>
 
             <div className="flex flex-row items-center gap-3 sm:gap-7.5 mt-3 sm:mt-7 justify-center sm:justify-start md:ml-26">
-              <span className="text-neutral-400 text-[36px] sm:text-[60px] md:text-[80px] font-normal leading-[120%]">
+              <span className="text-neutral-400 text-[32px] sm:text-[60px] md:text-[80px] font-normal leading-[120%]">
                 with
               </span>
               <div className="flex items-center gap-3 sm:gap-7.5">
@@ -46,17 +46,17 @@ const Hero = () => {
                   height={50}
                   className="rounded-full w-[100px] sm:w-[200px] h-auto"
                 />
-                <span className="text-zinc-900 font-normal text-[36px] sm:text-[60px] md:text-[80px] leading-[120%]">
+                <span className="text-zinc-900 font-normal text-[32px] sm:text-[60px] md:text-[80px] leading-[120%]">
                   Creativity
                 </span>
-                <span className="text-neutral-400 font-normal text-[36px] sm:text-[60px] md:text-[80px] leading-[120%] hidden sm:inline">
+                <span className="text-neutral-400 font-normal text-[32px] sm:text-[60px] md:text-[80px] leading-[120%] hidden sm:inline">
                   &
                 </span>
               </div>
             </div>
 
             <div className="flex flex-row items-center gap-3 sm:gap-7.5 mt-3 sm:mt-7 justify-center sm:justify-end mr-30 w-full">
-              <span className="text-neutral-400 font-normal text-[36px] sm:text-[60px] md:text-[80px] leading-[120%] inline sm:hidden">
+              <span className="text-neutral-400 font-normal text-[32px] sm:text-[60px] md:text-[80px] leading-[120%] inline sm:hidden">
                 &
               </span>
               <Image
@@ -66,7 +66,7 @@ const Hero = () => {
                 height={50}
                 className="rounded-full w-[100px] sm:w-[200px] h-auto"
               />
-              <span className="text-zinc-900 font-normal text-[36px] sm:text-[60px] md:text-[80px] leading-[120%] mr-0 md:mr-30">
+              <span className="text-zinc-900 font-normal text-[32px] sm:text-[60px] md:text-[80px] leading-[120%] mr-0 md:mr-30">
                 Intelligence
               </span>
             </div>

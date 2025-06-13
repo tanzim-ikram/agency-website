@@ -72,7 +72,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="min-w-[380px] md:min-w-[450px] max-w-[450px] md:max-w-[470px] bg-white border border-neutral-200 rounded-xl shadow-sm p-10 shrink-0 flex flex-col hover:bg-violet-50"
+              className="min-w-[350px] md:min-w-[450px] max-w-[400px] md:max-w-[470px] bg-white border border-neutral-200 rounded-xl shadow-sm p-6 sm:p-10 shrink-0 flex flex-col hover:bg-violet-50"
             >
               {/* Avatar & Quote */}
               <div className="flex items-center gap-2 mb-4 sm:mb-2">
@@ -81,15 +81,15 @@ export default function Testimonials() {
                   alt="avatar"
                   width={80}
                   height={80}
-                  className="rounded-full"
+                  className="rounded-full sm:w-20 sm:h-20 h-15 w-15"
                 />
-                <h3 className="font-sen text-zinc-900 font-bold text-2xl leading-[100%]">
+                <h3 className="font-sen text-zinc-900 font-bold text-2xl leading-[100%] max-w-3xs sm:max-w-xl">
                   “{testimonial.quote}”
                 </h3>
               </div>
 
               {/* Text */}
-              <p className="font-figtree text-zinc-700 flex-grow text-lg leading-[160%] mb-4 sm:mb-2">
+              <p className="font-figtree text-zinc-700 flex-grow text-lg leading-[160%] mb-4 sm:mb-2 max-w-xs sm:max-w-xl">
                 {testimonial.text}
               </p>
 
@@ -106,6 +106,7 @@ export default function Testimonials() {
                   alt="Sisyphus logo"
                   width={100}
                   height={40}
+                  className="sm:w-25 sm:h-10 w-22.5 h"
                 />
               </div>
             </div>

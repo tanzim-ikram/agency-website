@@ -77,7 +77,7 @@ const Expertise = () => {
         </h2>
 
         {/* Subtitle */}
-        <p className="max-w-sm sm:max-w-3xl mx-auto text-center font-figtree text-lg font-normal text-zinc-500 sm:mb-16 mb-0 relative z-10 py-10 sm:py-0">
+        <p className="max-w-xs sm:max-w-3xl mx-auto text-center font-figtree text-lg font-normal text-zinc-500 sm:mb-16 mb-0 relative z-10 py-10 sm:py-0">
           At Farasha Digital, we use a modern technology stack to build
           scalable, high-performance solutions, ensuring our products meet the
           highest industry standards.
@@ -93,10 +93,10 @@ const Expertise = () => {
               style={{ textDecoration: "none" }}
             >
               <div
-                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
-                style={{ width: "380px", height: "480px" }}
+                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group md:w-95 md:h-120 w-80 h-auto"
+                
               >
-                <div className="relative w-50 h-50 mb-10 pointer-events-none">
+                <div className="relative md:w-50 md:h-50 w-25 h-25 mb-10 pointer-events-none">
                   <Image
                     src={img}
                     alt={title}

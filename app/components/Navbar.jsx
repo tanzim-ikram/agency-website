@@ -56,7 +56,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Decorative Backgrounds */}
-      <div className="fixed bottom-140 left-1/2 -translate-x-1/2 z-20">
+      <div className="fixed -top-10 left-1/2 md:bottom-140 md:left-1/2 -translate-x-1/2 z-20">
         <Image
           src="/navbar/nav-top.png"
           alt="Decorative top navigation background"
