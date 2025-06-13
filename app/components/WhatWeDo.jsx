@@ -49,7 +49,7 @@ const WhatWeDo = () => {
                 src="/about/Text-Img2.png"
                 alt="Impact icon 3"
                 fill
-                className="inline rounded-full"
+                className="inline object-cover rounded-full"
                 priority
               />{" "}
             </div>
