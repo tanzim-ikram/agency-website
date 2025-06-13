@@ -4,7 +4,7 @@ import Image from "next/image";
 const Overview = () => {
   return (
     <div className="w-full">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-52 py-20 bg-white relative">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-52 py-15 bg-white relative">
         <div className="flex flex-col items-center">
           <h2
             className="font-sen text-zinc-900 text-[28px] sm:text-[48px] font-normal mb-8 sm:mb-10 text-center"
@@ -44,7 +44,7 @@ const Overview = () => {
           <div className="flex justify-center flex-wrap gap-4 sm:gap-6 lg:gap-6 items-stretch mt-10 px-4 sm:px-6 w-full">
             {/* Left large image */}
             <div
-              className="flex-1 min-w-[180px] sm:min-w-[250px] md:min-w-[280px] lg:min-w-[300px] xl:min-w-[320px] max-w-[600px] rounded-3xl overflow-hidden"
+              className="flex-1 min-w-[150px] sm:min-w-[250px] md:min-w-[280px] lg:min-w-[300px] xl:min-w-[320px] max-w-[600px] rounded-3xl overflow-hidden"
               style={{ height: "min(414px, 59vw)" }}
             >
               <Image
@@ -68,7 +68,7 @@ const Overview = () => {
                   alt="Overview 2"
                   width={400}
                   height={195}
-                  className="object-cover rounded-3xl w-full h-full"
+                  className="object-right object-cover sm:object-cover rounded-3xl w-full h-full"
                   priority
                 />
               </div>
@@ -81,7 +81,7 @@ const Overview = () => {
                   alt="Overview 3"
                   width={400}
                   height={195}
-                  className="object-cover rounded-lg w-full h-full"
+                  className="object-bottom-left object-cover sm:object-cover rounded-lg w-full h-full"
                   priority
                 />
               </div>

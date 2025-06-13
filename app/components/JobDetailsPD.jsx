@@ -163,53 +163,24 @@ const JobDetailsPD = () => {
           <h2 className="text-lg sm:text-2xl text-zinc-900 font-medium text-center mb-4">
             Why Join Us?
           </h2>
-          <ul className="text-lg space-y-2 text-zinc-500 px-4 sm:px-6 md:px-8">
-            <li className="flex items-center gap-2">
-              <Icon
-                icon="mingcute:checkbox-fill"
-                width="24"
-                height="24"
-                className="text-green-500"
-              />
-              Competitive salary and benefits package
-            </li>
-            <li className="flex items-center gap-2">
-              <Icon
-                icon="mingcute:checkbox-fill"
-                width="24"
-                height="24"
-                className="text-green-500"
-              />
-              Flexible working hours and remote work options
-            </li>
-            <li className="flex items-center gap-2">
-              <Icon
-                icon="mingcute:checkbox-fill"
-                width="24"
-                height="24"
-                className="text-green-500"
-              />
-              Professional development opportunities
-            </li>
-            <li className="flex items-center gap-2">
-              <Icon
-                icon="mingcute:checkbox-fill"
-                width="24"
-                height="24"
-                className="text-green-500"
-              />
-              A collaborative and supportive team environment
-            </li>
-            <li className="flex items-center gap-2">
-              <Icon
-                icon="mingcute:checkbox-fill"
-                width="24"
-                height="24"
-                className="text-green-500"
-              />
-              The chance to work on impactful projects and shape the future of
-              our products
-            </li>
+          <ul className="flex flex-col items-start justify-center text-lg space-y-4 text-zinc-500 px-4 sm:px-6 md:px-8">
+            {[
+              "Competitive salary and benefits package",
+              "Flexible working hours and remote work options",
+              "Professional development opportunities",
+              "A collaborative and supportive team environment",
+              "The chance to work on impactful projects and shape the future of our products",
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3 leading-[160%]">
+                <Icon
+                  icon="mingcute:checkbox-fill"
+                  width="24"
+                  height="24"
+                  className="text-green-500 mt-1 flex-shrink-0"
+                />
+                <span className="max-w-2xl">{item}</span>
+              </li>
+            ))}
           </ul>
         </section>
       </main>
