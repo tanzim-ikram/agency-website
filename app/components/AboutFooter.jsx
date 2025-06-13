@@ -37,7 +37,7 @@ const AboutFooter = () => {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg-8 xl:px-0 py-15 sm:py-16 md:py-20 lg:py-30 flex md:flex-row flex-col items-center gap-8 sm:gap-16 lg:items-start">
           {/* Left Side */}
           <div className="flex flex-col gap-10">
-            <h2 className="font-sen text-zinc-900 text-[28px] sm:text-4xl lg:text-6xl leading-tight font-normal">
+            <h2 className="font-sen text-zinc-900 text-lg sm:text-4xl lg:text-6xl leading-tight font-normal">
               Get in touch{" "}
               <Image
                 src="/about/about-text-img1.png"

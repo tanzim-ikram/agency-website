@@ -34,7 +34,7 @@ const ContactForm = () => {
         {/* Form */}
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="relative z-10 flex flex-col min-w-md sm:w-[605px] items-start gap-6"
+          className="relative z-10 flex flex-col min-w-xs sm:w-[605px] items-start gap-6"
         >
           <input
             type="text"

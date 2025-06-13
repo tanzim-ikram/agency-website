@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 const AboutHero = () => {
   return (
     <div>
-      <section className="relative overflow-hidden bg-white w-full h-[1250px] sm:h-auto">
+      <section className="relative overflow-hidden bg-white w-full sm:h-auto">
         {/* Background lines */}
         <Image
           src="/home/BG lines.png"
@@ -138,7 +138,7 @@ const AboutHero = () => {
             <Image src="/about/BG.svg" alt="Hero" width={705} height={631} />
           </div>
           {/* Hero Image Mobile*/}
-          <div className="md:hidden absolute -z-10 -bottom-105 right-12">
+          <div className="md:hidden relative -z-10 ">
             <Image 
             src="/about/BG2.svg" 
             alt="Hero" 
@@ -149,13 +149,13 @@ const AboutHero = () => {
           </div> 
         </div>
 
-        <div className="absolute md:relative z-20 bottom-10 overflow-hidden">
+        <div className="relative z-20 bottom-10 overflow-hidden">
           <Image
             src="/about/HeroImage3.png"
             alt="Hero"
             width={1440}
             height={600}
-            className="sm:w-full sm:h-auto h-70"
+            className="sm:w-full sm:h-auto h-60 w-auto object-cover"
           />
         </div>
       </section>

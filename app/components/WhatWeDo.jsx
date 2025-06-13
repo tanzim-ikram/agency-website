@@ -46,10 +46,10 @@ const WhatWeDo = () => {
             Why We Do{" "}
             <div className="relative overflow-hidden w-32.5 h-12.5 sm:w-30 sm:h-17.5">
               <Image
-                src="/about/about-text-img1.png"
+                src="/about/Text-Img2.png"
                 alt="Impact icon 3"
                 fill
-                className="inline object-none object-center sm:object-cover rounded-full"
+                className="inline rounded-full"
                 priority
               />{" "}
             </div>

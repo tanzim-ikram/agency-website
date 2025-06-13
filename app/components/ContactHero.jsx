@@ -66,68 +66,54 @@ const ContactHero = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-10 z-10">
-          {/* Card 1 */}
-          <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-6 sm:p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
-            <Image src="/contact/chat.svg" alt="Chat" width={40} height={40} />
-            <div>
-              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
-                Chat to sales
-              </h3>
-              <p className="text-zinc-500 font-figtree text-[14px] font-normal leading-[24px] mb-1.5 sm:mb-2">
-                Speak to our support team
-              </p>
-              <a
-                href="mailto:support@email.com"
-                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[175%] text-black/70 underline"
-              >
-                support@email.com
-              </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 sm:px-6 md:px-10 mb-10 z-10">
+          {[
+            {
+              icon: "/contact/chat.svg",
+              alt: "Chat",
+              title: "Chat to sales",
+              subtitle: "Speak to our support team",
+              link: "mailto:support@email.com",
+              linkText: "support@email.com",
+            },
+            {
+              icon: "/contact/location.svg",
+              alt: "Location",
+              title: "Visit us",
+              subtitle: "Visit our office",
+              link: "#",
+              linkText: "View on Google map",
+            },
+            {
+              icon: "/contact/call.svg",
+              alt: "Call",
+              title: "Call us",
+              subtitle: "Mon-Fri 8am-5pm",
+              link: "tel:+880123456789",
+              linkText: "+880 1234 56789",
+            },
+          ].map(({ icon, alt, title, subtitle, link, linkText }, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-start gap-6 w-full min-w-[360px] h-auto p-6 sm:p-10 mx-auto rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]"
+            >
+              <Image src={icon} alt={alt} width={40} height={40} />
+              <div>
+                <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
+                  {title}
+                </h3>
+                <p className="text-zinc-500 font-figtree text-sm font-normal leading-[24px] mb-2">
+                  {subtitle}
+                </p>
+                <a
+                  href={link}
+                  className="sm:text-lg text-[16px] font-figtree font-semibold leading-[24px] text-black/70 underline"
+                >
+                  {linkText}
+                </a>
+              </div>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
-            <Image
-              src="/contact/location.svg"
-              alt="Location"
-              width={40}
-              height={40}
-            />
-            <div>
-              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
-                Visit us
-              </h3>
-              <p className="text-zinc-500 font-figtree text-sm font-normal leading-[24px] mb-2">
-                Visit our office
-              </p>
-              <a
-                href="#"
-                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[24px] text-black/70 underline"
-              >
-                View on Google map
-              </a>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col items-start gap-10 w-[400px] h-[260px] p-10 flex-1 rounded-[24px] border border-[#E5E5E5] bg-white/30 backdrop-blur-[5px]">
-            <Image src="/contact/call.svg" alt="Call" width={40} height={40} />
-            <div>
-              <h3 className="text-zinc-900 font-sen text-lg sm:text-[24px] font-medium leading-[30px] mb-1">
-                Call us
-              </h3>
-              <p className="text-zinc-500 font-figtree text-sm font-normal leading-[24px] mb-2">
-                Mon-Fri 8am-5pm
-              </p>
-              <a
-                href="tel:+880123456789"
-                className="sm:text-lg text-[16px] font-figtree font-semibold leading-[24px] text-black/70 underline"
-              >
-                +880 1234 56789
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
