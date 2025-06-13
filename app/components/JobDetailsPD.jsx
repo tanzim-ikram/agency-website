@@ -79,7 +79,7 @@ const JobDetailsPD = () => {
           Apply Now <Icon icon="mage:arrow-up-right" width="20" height="20" />
         </button>
 
-        <div className="mt-12 sm:16 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 w-full px-4 sm:px-15 lg:px-25 xl:px-50">
+        <div className="mt-12 sm:16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 w-full px-0 sm:px-15 lg:px-25 xl:px-50">
           {[
             { title: "Location", info: "Dhaka, Bangladesh" },
             { title: "Due date", info: "21 Mar 2025" },
@@ -88,12 +88,12 @@ const JobDetailsPD = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-start gap-4 w-full p-4 rounded-[7.328px] bg-white/50 backdrop-blur-[1.53px]"
+              className="flex flex-col items-start gap-4 w-full p-3 sm:px-4 rounded-[7.328px] bg-white/50 backdrop-blur-[1.53px]"
             >
-              <p className="text-zinc-500 font-figtree text-[18px] font-normal leading-[160%]">
+              <p className="text-zinc-500 font-figtree text-[16px] sm:text-lg font-normal leading-[160%]">
                 {item.title}
               </p>
-              <p className="text-zinc-900 font-figtree text-[18px] font-medium leading-[160%]">
+              <p className="text-zinc-900 font-figtree text-[16px] sm:text-lg font-medium leading-[160%]">
                 {item.info}
               </p>
             </div>
