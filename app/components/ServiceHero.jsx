@@ -65,7 +65,7 @@ const ServiceHero = () => {
         </div>
 
         {/* Left Content */}
-        <div className="relative z-10 w-full max-w-3xl sm:max-w-6xl px-5 pt-12 sm:pt-20 lg:px-8 xl:px-[8%] text-center sm:text-left">
+        <div className="relative z-10 w-full max-w-3xl sm:max-w-6xl px-4 pt-12 sm:pt-20 lg:px-8 xl:px-[8%] text-center sm:text-left">
           {/* Mobile Heading */}
           <div className="block sm:hidden">
             <h1 className="font-sen text-[28px] font-normal text-neutral-400 leading-[110%] mb-3">
@@ -77,7 +77,7 @@ const ServiceHero = () => {
                 alt="Text image"
                 width={180}
                 height={40}
-                className="object-cover rounded-full h-16"
+                className="object-cover rounded-full h-10 w-45"
               />
               <span className="text-[28px] font-normal text-zinc-900">
                 Ambitious

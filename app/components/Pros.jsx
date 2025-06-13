@@ -56,7 +56,7 @@ const Pros = () => {
       </div>
 
       {/* Main content */}
-      <section className="relative max-w-7xl mx-auto px-6 py-16 bg-transparent mb-20 mt-10">
+      <section className="relative max-w-7xl mx-auto px-6 py-10 md:py-16 bg-transparent mb-20 mt-10">
         {/* Heading */}
         <h2 className="flex justify-center items-center gap-4 font-sen font-normal text-[28px] sm:text-5xl md:text-6xl text-zinc-900 mb-16 relative z-10">
           All pros{" "}

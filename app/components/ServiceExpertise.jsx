@@ -66,10 +66,9 @@ const ServiceExpertise = () => {
               style={{ textDecoration: "none" }}
             >
               <div
-                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group"
-                style={{ width: "380px", height: "480px" }}
+                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group md:w-95 md:h-120 w-80 h-auto"
               >
-                <div className="relative w-50 h-50 mb-10 pointer-events-none">
+                <div className="relative md:w-50 md:h-50 w-25 h-25 mb-10 pointer-events-none">
                   <Image
                     src={img}
                     alt={title}
