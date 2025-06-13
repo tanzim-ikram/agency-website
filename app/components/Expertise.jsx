@@ -92,10 +92,7 @@ const Expertise = () => {
               className="no-underline"
               style={{ textDecoration: "none" }}
             >
-              <div
-                className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group md:w-95 md:h-120 w-80 h-auto"
-                
-              >
+              <div className="relative cursor-pointer rounded-lg p-8 sm:p-10 border border-zinc-200 shadow-sm transition-all duration-300 bg-white group md:w-95 md:h-120 w-80 h-auto">
                 <div className="relative md:w-50 md:h-50 w-25 h-25 mb-10 pointer-events-none">
                   <Image
                     src={img}
@@ -135,7 +132,7 @@ const Expertise = () => {
         {/* Button */}
         <div className="flex justify-center mt-16">
           <button className="rounded-full bg-zinc-900 text-white font-figtree font-semibold px-10 py-2.5 flex items-center gap-2 hover:bg-blue-600 transition leading-[175%] z-10">
-            See All Services
+            <a href="/services">See All Services</a>
             <Icon icon="lineicons:arrow-right" width="25" height="25" />
           </button>
         </div>

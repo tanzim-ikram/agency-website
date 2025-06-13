@@ -86,7 +86,7 @@ const FrontendHero = () => {
             type="button"
             className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-7.5 py-3 sm:py-3.5 text-white text-lg font-semibold font-figtree gap-2 sm:gap-2.5 hover:bg-blue-600 transition leading-[175%]"
           >
-            Talk to an expert
+            <a href="/contact">Talk to an expert</a>
             <Icon icon="mage:arrow-up-right" width="24" height="24" />
           </button>
         </div>

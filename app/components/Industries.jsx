@@ -54,7 +54,7 @@ const Industries = () => {
 
         {/* Button */}
         <button className="mb-4 px-7.5 py-2.5 flex items-center gap-2.5 rounded-full bg-zinc-900 font-semibold text-white font-figtree hover:bg-blue-600 transition z-30 leading-[175%] text-sm xs:text-base sm:text-lg">
-          About Farasha Digital
+          <a href="/about">About Farasha Digital</a>
           <Icon icon="lineicons:arrow-right" width="25" height="25" />
         </button>
 
@@ -62,7 +62,7 @@ const Industries = () => {
         <div className="relative w-full max-w-sm sm:max-w-lg md:max-w-2xl h-[180px] xs:h-[220px] sm:h-[320px] md:h-[400px] mx-auto mt-6 sm:mt-10">
           {/* Ellipse background behind the globe */}
           <div className="absolute sm:-top-10 sm:-left-5 -top-22 -left-14 sm:w-180 sm:h-120 w-120 h-80 z-10">
-            <Image  
+            <Image
               src="/home/ellipse3.png"
               alt="Ellipse Background"
               layout="fill"

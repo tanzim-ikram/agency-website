@@ -75,7 +75,7 @@ const Hero = () => {
           {/* Buttons */}
           <div className="mt-18 flex flex-col sm:flex-col md:flex-row justify-center items-center gap-4">
             <button className="bg-zinc-900 text-white w-[260px] sm:w-[250px] md:w-[250px] rounded-full px-7.5 py-3.5 text-base font-semibold flex items-center justify-center gap-2 hover:bg-blue-600 transition">
-              Get In Touch
+              <a href="/contact">Get In Touch</a>
               <Icon icon="iconoir:mail" width="22" height="22" />
             </button>
 

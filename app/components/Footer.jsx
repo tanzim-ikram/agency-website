@@ -63,7 +63,7 @@ const Footer = () => {
           </p>
 
           <button className="gap-2 bg-zinc-900 hover:bg-blue-600 transition text-white px-7.5 py-2.5 rounded-full text-lg font-semibold inline-flex items-center ">
-            Get In Touch
+            <a href="/contact">Get In Touch</a>
             <Icon icon="iconoir:mail" width="22" height="22" />
           </button>
         </div>
