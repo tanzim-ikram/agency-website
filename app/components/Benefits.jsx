@@ -64,7 +64,7 @@ const Benefits = () => {
         >
           Our perks and{" "}
           <Image
-            src="/career/text-img1.png"
+            src="/career/Career-Text-Img1.png"
             alt="Impact icon 3"
             width={140}
             height={70}
