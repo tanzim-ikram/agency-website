@@ -68,7 +68,7 @@ export default function Testimonials() {
       />
       {/* Cards */}
       <div className="overflow-x-auto px-4 relative z-20 scrollbar-hide">
-        <div className="flex gap-6 md:gap-7.5 w-max px-2 md:px-20">
+        <div className="flex justify-center gap-6 md:gap-7.5 w-max px-2 md:px-20 mx-auto">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -106,7 +106,7 @@ export default function Testimonials() {
                   alt="Sisyphus logo"
                   width={100}
                   height={40}
-                  className="sm:w-25 sm:h-10 w-22.5 h"
+                  className="sm:w-25 sm:h-7.5 w-22.5 h"
                 />
               </div>
             </div>
